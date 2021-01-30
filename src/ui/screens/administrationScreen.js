@@ -7,15 +7,16 @@
 
 import React from "react";
 import {screenTitles} from "../contents/strings";
-import RecoveredComponent from "../components/recovered/recoveredComponent";
 import ScreenContainer from "../components/screenContainer";
+import AdministrationComponent from "../components/administration/administrationComponent";
 
-function RecoveredScreen({ navigation }) {
+
+
+function AdministrationScreen({ navigation }) {
 
     return (
-        <ScreenContainer title={screenTitles.recovered} component={<RecoveredComponent/>} />
+        <ScreenContainer title={screenTitles.administration} component={<AdministrationComponent/>} />
     );
-
 }
 
-export default RecoveredScreen;
+export default AdministrationScreen;

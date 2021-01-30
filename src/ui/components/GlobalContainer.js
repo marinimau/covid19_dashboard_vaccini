@@ -14,21 +14,14 @@ import Colors from "../theme/colors";
 import {dimens} from "../theme/dimens";
 import {screenTitles} from "../contents/strings";
 import LatestUpdateResumeScreen from "../screens/latestUpdateResumeScreen";
-import NewCasesScreen from "../screens/newCasesScreen";
-import CurrentPositiveScreen from "../screens/currentPositiveScreen";
-import RecoveredScreen from "../screens/recoveredScreen";
-import SwabsResumeScreen from "../screens/swabsScreen";
-import DiedScreen from "../screens/diedScreen";
-import RepartitionScreen from "../screens/dataRepartitionScreen";
+import DeliveryScreen from "../screens/deliveryScreen";
+import AdministrationScreen from "../screens/administrationScreen";
 import InfoScreen from "../screens/infoScreen";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import {Dimensions} from "react-native";
 import {Appearance, AppearanceProvider} from 'react-native-appearance';
 import { Updates } from 'expo';
 
-/* Data */
-import DataRouter from "../../logic/dataRouter";
-import NewCasesData from "../../logic/newCasesData";
 
 const Drawer = createDrawerNavigator();
 
@@ -79,13 +72,8 @@ export default class GlobalContainer extends PureComponent {
 
                         <Drawer.Screen name={screenTitles.latestUpdateResume}
                                        component={LatestUpdateResumeScreen}/>
-                        <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
-                        <Drawer.Screen name={screenTitles.currentPositive}
-                                       component={CurrentPositiveScreen}/>
-                        <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
-                        <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
-                        <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
-                        <Drawer.Screen name={screenTitles.repartition} component={RepartitionScreen} />
+                        <Drawer.Screen name={screenTitles.delivered} component={DeliveryScreen}/>
+                        <Drawer.Screen name={screenTitles.administration} component={AdministrationScreen}/>
                         <Drawer.Screen name={screenTitles.info} component={InfoScreen}/>
 
                     </Drawer.Navigator>

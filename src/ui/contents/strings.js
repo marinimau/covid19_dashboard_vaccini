@@ -6,10 +6,10 @@
  */
 
 export const appInfo = {
-    name: 'Covid19 Dashboard',
+    name: 'Covid19 Dashboard Vaccini',
     version: '1.0.0 beta',
     author: '@marinimau',
-    description: 'Covid-19 Italy è una dashboard realizzata dall\'Università degli Studi di Cagliari per il monitoraggio e la visualizzazione dei dati riguardanti la pandemia Covid-19 nel territorio italiano.'
+    description: 'Covid-19 Italy è una dashboard realizzata da Mauro Marini per il monitoraggio e la visualizzazione dei dati riguardanti la distribuzione e la somministrazione dei vaccini Covid-19 nel territorio italiano.'
 };
 
 export const uiButtons = {
@@ -25,15 +25,16 @@ export const loadingMessages = {
 export const screenTitles = {
     home: 'Home',
     latestUpdateResume: 'Resoconto',
-    newCases: 'Casi Totali',
-    recovered: 'Guariti',
-    died: 'Deceduti',
-    currentPositive: 'Positivi Attuali',
-    swab: 'Tamponi',
-    repartition: 'Ripartizione',
+    delivered: 'Consegne',
+    administration: 'Somministrazioni',
     info: 'Informazioni'
 };
 
+
+export const cardTitles = {
+    delivery: 'Consegne',
+    administration: 'Somministrazioni'
+}
 
 export const chartTitles = {
     locationSelectorPlaceholder: 'Cambia regione...',
@@ -138,6 +139,7 @@ export const dataDescription = {
 
 export const infoMenuTitles = {
     sectionLinks: 'Link utili',
+    dashboard_covid: 'Covid-19 Italy',
     donate: 'Dona',
     contact: 'Contatti',
     repository: 'Repository',
@@ -146,8 +148,9 @@ export const infoMenuTitles = {
 
 
 export const infoMenuDescriptions = {
+    dashboard_covid: 'Dashboard andamento pandemia',
     donate: 'donazione libera',
     contact: 'ricevi assistenza',
     repository: 'codice sorgente',
-    data: 'Protezione Civile IT',
+    data: 'Developers Italia',
 }

@@ -6,24 +6,47 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="modificati 2 grafici">
+      <change afterPath="$PROJECT_DIR$/src/ui/screens/deliveryScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshot/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshot/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDied.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRecovered.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardSwab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTestedCases.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTotalCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDelivery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/dataRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/deathData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/recoveredData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/swabData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/totalCasesRepartitionData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/repartition/repartitionComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/infoMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/infoMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/currentPositiveScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/administrationScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/dataRepartitionScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/diedScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/recoveredScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/swabsScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/legendColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/legendColors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +80,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ui/components/latest_updates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
@@ -115,6 +138,7 @@
       <workItem from="1611048633161" duration="1598000" />
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
+      <workItem from="1611990883178" duration="4304000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -417,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611568281778</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="modificati 2 grafici">
+      <created>1611991003509</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1611991003509</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,6 +495,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="modificati 2 grafici" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611994672314">
+      <screen x="0" y="25" width="2560" height="1341" />
+    </state>
+    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1611994672314" />
     <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1603446676155">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
@@ -480,17 +515,20 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1611568286657">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1611991008541">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214803764" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611568286657" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611991008541" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.816@0.25.1440.816" timestamp="1604076747300" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611048636766" />
+    <state x="1045" y="588" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1611990989080">
+      <screen x="0" y="25" width="2560" height="1341" />
+    </state>
+    <state x="1045" y="588" key="git4idea.remote.GitConfigureRemotesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1611990989080" />
   </component>
 </project>

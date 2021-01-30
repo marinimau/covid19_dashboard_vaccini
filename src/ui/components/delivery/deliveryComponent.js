@@ -10,7 +10,7 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
+import CardDelivery from "../../../data_representation/resume_cards/cardDelivery";
 import LegendColors from "../../theme/legendColors";
 import NewCasesData from "../../../logic/newCasesData";
 import LineChartCard from "../cards/lineChartCard";
@@ -19,11 +19,11 @@ import MyProgressCircle from "../../../data_representation/charts/progressCircle
 
 let dataChangedListener;
 
-class NewCasesComponent extends Component {
+class DeliveryComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: NewCasesData(), color: LegendColors.red, value: 0}
+        this.state = { data: NewCasesData(), color: LegendColors.indigo, value: 0}
     }
 
     componentDidMount() {
@@ -44,11 +44,11 @@ class NewCasesComponent extends Component {
         return (
             <MainScrollableContents>
                     <>
-                        <CardTotalCases />
+                        <CardDelivery />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.totalCasesPercentage}</Text>
-                            <MyProgressCircle value={this.state.data.percentageOfTotal} color={LegendColors.red}/>
+                            <MyProgressCircle value={this.state.data.percentageOfTotal} color={this.state.color}/>
                             <Text style={styles.chartDescription}>{dataDescription.totalCasesPercentage}</Text>
                         </View>
 
@@ -72,4 +72,4 @@ class NewCasesComponent extends Component {
 
 }
 
-export default NewCasesComponent;
+export default DeliveryComponent;

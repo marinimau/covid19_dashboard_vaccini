@@ -9,7 +9,7 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardCurrentPositive from "../../../data_representation/resume_cards/cardCurrentPositive";
+import CardAdministration from "../../../data_representation/resume_cards/cardAdministration";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
@@ -18,32 +18,30 @@ import PositiveDeltaData from "../../../logic/positiveDeltaData";
 import CardHomeQuarantine from "../../../data_representation/resume_cards/cardHomeQuarantine";
 import CardHospitalizedWithSymptoms from "../../../data_representation/resume_cards/cardHospitalizedWithSymptoms";
 import CardCritical from "../../../data_representation/resume_cards/cardCritical";
-import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
-import PositiveRepartitionData from "../../../logic/positiveRepartitionData";
 import LineChartCard from "../cards/lineChartCard";
 
-class CurrentPositiveComponent extends Component {
+class AdministrationComponent extends Component {
 
     constructor() {
         super();
-        this.state = {data: PositiveDeltaData(), color: LegendColors.yellow}
+        this.state = {data: PositiveDeltaData(), color: LegendColors.pink}
     }
 
     render() {
         return (
             <MainScrollableContents>
                 <>
-                    <CardCurrentPositive />
+                    <CardAdministration />
 
                     <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                         <Text style={[styles.chartTitle]}>{chartTitles.currentPositivePercentage}</Text>
-                        <MyProgressCircle value={CurrentPositiveData().positiveRatio} color={LegendColors.yellow}/>
+                        <MyProgressCircle value={CurrentPositiveData().positiveRatio} color={this.state.color}/>
                         <Text style={styles.chartDescription}>{chartTitles.positivePercentageDescription}</Text>
                     </View>
 
                     <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                         <Text style={[styles.chartTitle]}>{chartTitles.positiveCasesAreaPercentage}</Text>
-                        <MyProgressCircle value={this.state.data.percentageOfTotal} color={LegendColors.yellow}/>
+                        <MyProgressCircle value={this.state.data.percentageOfTotal} color={this.state.color}/>
                         <Text style={styles.chartDescription}>{chartTitles.positiveCasesAreaPercentage}</Text>
                     </View>
 
@@ -78,4 +76,4 @@ class CurrentPositiveComponent extends Component {
 
 }
 
-export default CurrentPositiveComponent;
+export default AdministrationComponent;

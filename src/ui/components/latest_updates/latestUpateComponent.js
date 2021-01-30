@@ -8,13 +8,10 @@
 import React, {Component} from 'react';
 import {TouchableOpacity} from "react-native";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
-import CardRecovered from "../../../data_representation/resume_cards/cardRecovered";
-import CardDied from "../../../data_representation/resume_cards/cardDied";
-import CardCurrentPositive from "../../../data_representation/resume_cards/cardCurrentPositive";
+import CardDelivery from "../../../data_representation/resume_cards/cardDelivery";
+import CardAdministration from "../../../data_representation/resume_cards/cardAdministration";
 import {navigate} from "../../../utils/rootNavigationRef";
 import {screenTitles} from "../../contents/strings";
-import CardSwab from "../../../data_representation/resume_cards/cardSwab";
 import CardDate from "../../../data_representation/resume_cards/cardDate";
 
 class LatestUpdateComponent extends Component {
@@ -31,34 +28,15 @@ class LatestUpdateComponent extends Component {
 
                 <>
                     <TouchableOpacity onPress={() => {
-                        navigate(screenTitles.newCases);
+                        navigate(screenTitles.delivered);
                     }}>
-                        <CardTotalCases/>
+                        <CardDelivery/>
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => {
-                        navigate(screenTitles.currentPositive);
+                        navigate(screenTitles.administration);
                     }}>
-                        <CardCurrentPositive/>
-                    </TouchableOpacity>
-
-
-                    <TouchableOpacity onPress={() => {
-                        navigate(screenTitles.recovered);
-                    }}>
-                        <CardRecovered/>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={() => {
-                        navigate(screenTitles.swab);
-                    }}>
-                        <CardSwab/>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={() => {
-                        navigate(screenTitles.died);
-                    }}>
-                        <CardDied/>
+                        <CardAdministration/>
                     </TouchableOpacity>
 
                     <CardDate/>

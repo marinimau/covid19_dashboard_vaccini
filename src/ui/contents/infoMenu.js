@@ -4,10 +4,17 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
+
 import {infoMenuDescriptions, infoMenuTitles} from "./strings";
 import RemoteUrls from "./urls";
 
 export const menuLinks = [
+    {
+        icon: 'chart-timeline-variant',
+        title: infoMenuTitles.dashboard_covid,
+        description: infoMenuDescriptions.dashboard_covid,
+        url: RemoteUrls.dashboard_covid
+    },
     {
         icon: 'gift-outline',
         title: infoMenuTitles.donate,

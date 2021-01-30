@@ -8,12 +8,14 @@ import darkMode from "./darkModeDetector";
 
 let LegendColors = {
     green: darkMode() ? '#30d158' : '#34c759',
-    yellow: darkMode() ? '#ffd60a' : '#ffcc00',
     red: darkMode() ? '#ff453a' : '#ff3a30',
+    orange: darkMode() ?'#ff9f0a' :  '#ff9500',
+    yellow: darkMode() ? '#ffd60a' : '#ffcc00',
     grey: darkMode() ? '#767676' : '#616161',
     blue: darkMode() ? '#0a84ff' : '#007bff',
+    indigo: darkMode() ? '#5e5ce6' : '#5856d6',
     teal: darkMode() ? '#64d3ff' : '#5ac8fa',
-    orange: darkMode() ?'#ff9f0a' :  '#ff9500',
+    pink: darkMode() ? '#ff375f' : '#ff2d55',
     purple: darkMode() ? '#bf5af2' : '#af52de',
     neutral: darkMode() ? '#505050' : '#000000',
 }

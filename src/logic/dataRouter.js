@@ -5,13 +5,9 @@
  * Location: Baratili San Pietro
  */
 import NewCasesData from "./newCasesData";
-import {cleanData as cleanDeaths}  from "./deathData";
 import {cleanData as cleanNewCases} from "./newCasesData";
-import {cleanData as cleanRecovered} from "./recoveredData";
 import {cleanData as cleanPositiveDelta} from "./positiveDeltaData";
-import {cleanData as cleanPositiveRepartition} from "./positiveRepartitionData";
-import {cleanData as cleanTotalCasesRepartion} from "./totalCasesRepartitionData";
-import {cleanData as cleanSwab} from "./swabData";
+
 
 
 let DataRouter = {
@@ -22,13 +18,8 @@ let DataRouter = {
     },
 
     cleanData(){
-        cleanDeaths();
         cleanNewCases();
-        cleanRecovered();
         cleanPositiveDelta();
-        cleanPositiveRepartition();
-        cleanTotalCasesRepartion();
-        cleanSwab();
     }
 }
 

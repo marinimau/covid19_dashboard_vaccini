@@ -5,17 +5,17 @@
  * Location: Baratili San Pietro
  */
 
+
 import React from "react";
 import {screenTitles} from "../contents/strings";
-import SwabsComponent from "../components/swabs/swabsComponent";
+import DeliveryComponent from "../components/delivery/deliveryComponent";
 import ScreenContainer from "../components/screenContainer";
 
-function SwabsResumeScreen({ navigation }) {
+function DeliveryScreen({ navigation }) {
 
     return (
-        <ScreenContainer title={screenTitles.swab} component={<SwabsComponent/>} />
+        <ScreenContainer title={screenTitles.delivered} component={<DeliveryComponent/>} />
     );
-
 }
 
-export default SwabsResumeScreen;
+export default DeliveryScreen;
