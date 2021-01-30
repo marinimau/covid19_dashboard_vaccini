@@ -6,6 +6,7 @@
  */
 
 import SelectedLocation from "./selectedLocation";
+import Preprocessing from "./delivery/preprocessing";
 
 let Records = {
 
@@ -17,10 +18,11 @@ let Records = {
 
     setAdministrationRecords(records){
         this.data.administration = records;
+
     },
 
     setDeliveryRecords(records){
-        this.data.delivery = records;
+        this.data.delivery = Preprocessing(records);
     },
 
     getRecords(){

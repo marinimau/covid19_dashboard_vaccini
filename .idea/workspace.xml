@@ -11,29 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="modificati 2 grafici">
-      <change afterPath="$PROJECT_DIR$/src/logic/italy_open_source/delivery/retrieveFromWeb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/italy_open_source/retrieve.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/dateDifference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/REGION_newCases.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/currentPositiveData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/currentPositiveData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/latestUpdateData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/latestUpdateData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/newCasesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/newCasesData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/notesData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_dead.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_hospitalData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positivity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_recovered.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/retrieveData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/retrieveRegionData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/italy_open_source/delivery/retrieveFromWeb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/italy_open_source/retrieve.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dateToString.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dateToString.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,19 +58,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/src/logic/region" />
-      <recent name="$PROJECT_DIR$/src/logic/general" />
-      <recent name="$PROJECT_DIR$/src/ui/components/header" />
-      <recent name="$PROJECT_DIR$/src/ui/components/loading" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
       <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/logic" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/src/logic/region" />
+      <recent name="$PROJECT_DIR$/src/logic/general" />
+      <recent name="$PROJECT_DIR$/src/ui/components/header" />
+    </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -127,6 +113,7 @@
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
+      <workItem from="1612002236589" duration="4193000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -447,7 +434,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

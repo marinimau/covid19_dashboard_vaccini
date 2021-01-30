@@ -23,13 +23,13 @@
  *
  */
 
-
-import RemoteUrls from "../../ui/contents/urls";
+import RemoteUrls from "../ui/contents/urls";
 
 const retrieveData = (url) =>
     fetch(url)
         .then(res => (res.ok ? res : Promise.reject(res)))
-        .then(res => res.json()["data"]);
+        .then(res => res.json())
+        .then(res => res["data"]);
 
 export const retrieveDeliveryData = () => retrieveData(RemoteUrls.delivery);
 

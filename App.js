@@ -12,7 +12,7 @@ import {enableScreens} from 'react-native-screens';
 import ErrorScreen from "./src/ui/components/loading/error";
 import LoadingComponent from "./src/ui/components/loading/loading";
 import GlobalContainer from "./src/ui/components/GlobalContainer";
-import {retrieveAdministrationData, retrieveDeliveryData} from "./src/logic/italy_open_source/retrieve";
+import {retrieveAdministrationData, retrieveDeliveryData} from "./src/logic/retrieve";
 
 
 enableScreens();
