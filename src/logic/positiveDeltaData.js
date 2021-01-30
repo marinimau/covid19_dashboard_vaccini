@@ -39,44 +39,6 @@ export function cleanData() {
 }
 
 const PositiveDeltaData = (data) => {
-
-    if(data === undefined){
-        data = Records.getRecords();
-    }
-
-    if(data !== null){
-        let d = data[data.length - 1];
-
-        dataToReturn.percentageOfTotal = (Math.round(d['totale_positivi']/Records.data[Records.data.length -1]['totale_positivi'] * 100 * 100).toFixed(2)) / 100;
-
-        /* Home Quarantine */
-        dataToReturn.homeQuarantine = (d['isolamento_domiciliare']).toLocaleString('it');
-        dataToReturn.homeQuarantinePercentage = Math.round(Math.abs(d['isolamento_domiciliare'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
-        dataToReturn.homeQuarantineVariation = (d['isolamento_domiciliare'] - data[data.length - 2]['isolamento_domiciliare']).toLocaleString('it');
-        dataToReturn.homeQuarantineVariationPercentage = Math.round((data[data.length - 2]['isolamento_domiciliare'] - d['isolamento_domiciliare']) / d['isolamento_domiciliare'] * 100 * 100 / 100).toFixed(2);
-
-        /* Hospitalized with Symptoms */
-        dataToReturn.hospitalized = d['totale_ospedalizzati'].toLocaleString('it');
-        dataToReturn.hospitalizedPercentage = Math.round(Math.abs(d['totale_ospedalizzati'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
-        dataToReturn.hospitalizedVariation = (d['totale_ospedalizzati'] - data[data.length - 2]['totale_ospedalizzati']).toLocaleString('it');
-        dataToReturn.hospitalizedVariationPercentage = Math.round((data[data.length - 2]['totale_ospedalizzati'] - d['totale_ospedalizzati']) / d['totale_ospedalizzati'] * 100 * 100 / 100).toFixed(2);
-
-        /* Critical */
-        dataToReturn.critical = d['terapia_intensiva'].toLocaleString('it');
-        dataToReturn.criticalPercentage = Math.round(Math.abs(d['terapia_intensiva'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
-        dataToReturn.criticalVariation = (d['terapia_intensiva'] - data[data.length - 2]['terapia_intensiva']).toLocaleString('it');
-        dataToReturn.criticalVariationPercentage = Math.round((data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) === 0 ? 0 : (data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) / d['terapia_intensiva'] * 100 * 100 / 100).toFixed(2);
-
-
-        if( dataToReturn.deltaTrendAbsolute.length === 0){
-            for (let i=1; i< data.length; i+=1){
-                dataToReturn.deltaTrendAbsolute.push(data[i]['totale_positivi']);
-                dataToReturn.deltaTrendDayVariation.push(data[i]['totale_positivi']-data[i-1]['totale_positivi']);
-                dataToReturn.criticalTrendAbsolute.push(data[i]['terapia_intensiva']);
-            }
-        }
-
-    }
     return dataToReturn;
 };
 

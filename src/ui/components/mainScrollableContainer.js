@@ -8,7 +8,6 @@
 import React, {Component} from 'react'
 import {styles} from "../theme/style";
 import {ScrollView, View} from "react-native";
-import NotesComponent from "./latest_updates/notesComponent";
 import LocationSelector from "./location_selector/locationSelector";
 
 export default class MainScrollableContents extends Component {
@@ -27,7 +26,6 @@ export default class MainScrollableContents extends Component {
                             {this.props.children}
                         </View>
                     </ScrollView>
-                    <NotesComponent/>
                 </View>
             </>
         );

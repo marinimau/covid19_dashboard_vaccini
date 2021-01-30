@@ -9,12 +9,18 @@ import SelectedLocation from "./selectedLocation";
 
 let Records = {
 
-    data: [],
-    regionData: [],
+    data: {
+        delivery: [],
+        administration: [],
+    },
     singleRegionData: [],
 
-    setRecords(records){
-        this.data = records;
+    setAdministrationRecords(records){
+        this.data.administration = records;
+    },
+
+    setDeliveryRecords(records){
+        this.data.delivery = records;
     },
 
     getRecords(){
@@ -25,29 +31,9 @@ let Records = {
             return this.data;
         }
         else {
-            if(this.singleRegionData.length === 0){
-                for(let i = SelectedLocation.getLocation() - 1; i < this.regionData.length; i+=21){
-                    this.singleRegionData.push(this.regionData[i]);
-                }
-            }
-            console.log('normal data:');
-            console.log(this.data);
-            console.log(this.singleRegionData);
-            return this.singleRegionData;
+
         }
     },
-
-    setRegionRecords(records){
-        this.regionData = records;
-    },
-
-    getRegionRecords(){
-        return this.regionData;
-    },
-
-    clearSingleRegionData(){
-        this.singleRegionData = [];
-    }
 
 };
 

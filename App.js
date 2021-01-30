@@ -9,11 +9,10 @@ import React from 'react';
 import Async from 'react-async';
 import Records from "./src/logic/dataset";
 import {enableScreens} from 'react-native-screens';
-import retrieveData from "./src/logic/retrieveData";
 import ErrorScreen from "./src/ui/components/loading/error";
-import retrieveRegionData from "./src/logic/retrieveRegionData";
 import LoadingComponent from "./src/ui/components/loading/loading";
 import GlobalContainer from "./src/ui/components/GlobalContainer";
+import {retrieveAdministrationData, retrieveDeliveryData} from "./src/logic/italy_open_source/retrieve";
 
 
 enableScreens();
@@ -21,18 +20,18 @@ enableScreens();
 export default function App() {
 
     return (
-        <Async promiseFn={retrieveData}>
+        <Async promiseFn={retrieveAdministrationData}>
             {({data, err, isLoading}) => {
                 if (isLoading) return <LoadingComponent/>
                 if (err) return <ErrorScreen/>
-                if (data) Records.setRecords(data)
+                if (data) Records.setAdministrationRecords(data)
 
                 return (
-                    <Async promiseFn={retrieveRegionData}>
+                    <Async promiseFn={retrieveDeliveryData}>
                         {({data, err, isLoading}) => {
                             if (isLoading) return <LoadingComponent/>
                             if (err) return <ErrorScreen/>
-                            if (data) Records.setRegionRecords(data)
+                            if (data) Records.setDeliveryRecords(data)
 
                             return (
                                 <GlobalContainer />

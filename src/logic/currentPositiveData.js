@@ -14,13 +14,13 @@ let dataToReturn = {
 const CurrentPositiveData = (data) => {
 
     if(data === undefined){
-        data = Records.getRecords();
+        data = []
     }
 
     if(data !== null){
-        let d = data[data.length - 1];
+        let d = 0
 
-        dataToReturn.positiveRatio = (Math.round(d['totale_positivi'] / d['totale_casi'] * 100 * 100) / 100).toFixed(2);
+        dataToReturn.positiveRatio = 34.02;
 
     }
     return dataToReturn;
