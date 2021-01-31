@@ -12,11 +12,10 @@ export function calculateDifferenceInDaysFromString(date1,date2){
 }
 
 export function daysFromDay0() {
-    return calculateDifferenceInDaysFromString(new Date('2020-12-21T00:00:00'), Date.now());
+    return calculateDifferenceInDaysFromString(new Date('2020-12-15T00:00:00'), Date.now());
 }
 
 export function compareDateUsingDaysFromDay0(daysFromStart, dateString) {
-    const diffFromStart = calculateDifferenceInDaysFromString(new Date('2020-12-21T00:00:00'), new Date(dateString));
-    console.log(daysFromStart, diffFromStart);
-    return false
+    const diffFromStart = calculateDifferenceInDaysFromString(new Date('2020-12-15T00:00:00'), new Date(dateString));
+    return daysFromStart === diffFromStart;
 }

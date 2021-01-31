@@ -11,4 +11,5 @@ export default class DeliveryData {
     pushToRegion = (item) => {
         this.regions.push(item);
     }
+
 }
