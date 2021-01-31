@@ -23,6 +23,7 @@ let Records = {
 
     setDeliveryRecords(records){
         this.data.delivery = Preprocessing(records);
+        console.log(this.data.delivery);
     },
 
     getRecords(){

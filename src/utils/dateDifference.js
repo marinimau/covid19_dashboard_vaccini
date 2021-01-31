@@ -6,7 +6,17 @@
  */
 
 
-export function calculateDifferenceInDaysFromString(dateString){
-    let date = Date(dateString);
-    return Math.round(Math.abs(date - Date.now()) / (1000*60*60*24));
+export function calculateDifferenceInDaysFromString(date1,date2){
+    const diffTime = Math.abs(date1 - date2);
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+
+export function daysFromDay0() {
+    return calculateDifferenceInDaysFromString(new Date('2020-12-21T00:00:00'), Date.now());
+}
+
+export function compareDateUsingDaysFromDay0(daysFromStart, dateString) {
+    const diffFromStart = calculateDifferenceInDaysFromString(new Date('2020-12-21T00:00:00'), new Date(dateString));
+    console.log(daysFromStart, diffFromStart);
+    return false
 }
