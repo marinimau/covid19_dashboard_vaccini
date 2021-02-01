@@ -26,9 +26,9 @@ export default class DeliveryAttrs {
         this.delivery_variation.push(item);
     }
 
-    addPfizerCumulative = (item) =>{
-        this.producer_cumulative.pfizer.push(this.producer_cumulative.pfizer[this.producer_cumulative.pfizer.length - 1] + item);
-        this.producer_cumulative.others.push(this.producer_cumulative.others[this.producer_cumulative.others.length - 1])
+    addPfizerCumulative = (pfizer, other) =>{
+        this.producer_cumulative.pfizer.push(this.producer_cumulative.pfizer[this.producer_cumulative.pfizer.length - 1] + pfizer);
+        this.producer_cumulative.others.push(this.producer_cumulative.others[this.producer_cumulative.others.length - 1] + other);
     }
 
     clear = () => {

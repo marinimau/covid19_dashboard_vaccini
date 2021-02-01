@@ -19,7 +19,7 @@ function organizeByDate(data){
         let index = 0;
         //for each day from day 0 to today
         for(let i = 0; i < daysFromDay0(); i++) {
-            let tmp = 0, tmp_pfizer = 0;
+            let tmp = 0, tmp_pfizer = 0, tmp_other = 0;
             //while date equals to today
             while(index < data[r].length && compareDateUsingDaysFromDay0(i, data[r][index]["data_consegna"])) {
                 //tmp += head array
@@ -29,12 +29,15 @@ function organizeByDate(data){
                     //tmp_pfizer_cumulative += variation
                     tmp_pfizer += data[r][index]["numero_dosi"];
                 }
+                else {
+                    tmp_other += data[r][index]["numero_dosi"];
+                }
                 index++;
             }
             current_region.setRegion(data[r][0]["area"]);
             current_region.addCumulative(tmp);
             current_region.addVariation(tmp);
-            current_region.addPfizerCumulative(tmp_pfizer);
+            current_region.addPfizerCumulative(tmp_pfizer, tmp_other);
         }
         dataset.pushToRegion(current_region)
     }
