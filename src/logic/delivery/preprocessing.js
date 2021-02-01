@@ -8,21 +8,6 @@ import {compareDateUsingDaysFromDay0, daysFromDay0} from "../../utils/dateDiffer
 import DeliveryData from "./delivery_data";
 import DeliveryAttrs from "./delivery_attrs";
 
-function divideByRegion(data){
-    let dataToReturn = [];
-    let tmp = [];
-    for(let i = 0; i < data.length; i++){
-        if(i !== 0 && data[i]["area"] !== data[i-1]["area"]){
-            dataToReturn.push(tmp);
-            tmp = [];
-        }
-        tmp.push(data[i]);
-    }
-    dataToReturn.push(tmp);
-    console.log(dataToReturn);
-    return dataToReturn.length === 21 ? dataToReturn : [];
-}
-
 function organizeByDate(data){
     let dataset = new DeliveryData();
     let ita = new DeliveryAttrs();
@@ -59,15 +44,18 @@ function organizeByDate(data){
 
 function createAllItalyResume(data){
     for(let i = 1; i < data.regions[1].delivery_cumulative.length; i++){
-        let cumulative = 0, variation = 0, pfizer_cumulative = 0;
+        let cumulative = 0, variation = 0, pfizer_cumulative = 0, others_comulative = 0;
         for(let j = 1; j < data.regions.length; j++){
             cumulative += data.regions[j].delivery_cumulative[i];
             variation += data.regions[j].delivery_variation[i];
-            pfizer_cumulative += data.regions[j].pfizer_cumulative[i];
+            pfizer_cumulative += data.regions[j].producer_cumulative.pfizer[i];
+            others_comulative += data.return[j].producer_cumulative.others[i];
+
         }
         data.regions[0].delivery_cumulative.push(cumulative);
         data.regions[0].delivery_variation.push(variation);
-        data.regions[0].pfizer_cumulative.push(pfizer_cumulative);
+        data.regions[0].producer_cumulative.pfizer.push(pfizer_cumulative);
+        data.regions[0].producer_cumulative.others.push(others_comulative);
     }
     return data
 }

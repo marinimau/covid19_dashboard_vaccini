@@ -9,7 +9,10 @@ export default class DeliveryAttrs {
     region = '';
     delivery_cumulative = [0];
     delivery_variation = [0];
-    pfizer_cumulative = [0]
+    producer_cumulative = {
+        pfizer: [0],
+        others: [0]
+    }
 
     setRegion = (region) => {
         this.region = region;
@@ -24,14 +27,16 @@ export default class DeliveryAttrs {
     }
 
     addPfizerCumulative = (item) =>{
-        this.pfizer_cumulative.push(this.pfizer_cumulative[this.pfizer_cumulative.length - 1] + item);
+        this.producer_cumulative.pfizer.push(this.producer_cumulative.pfizer[this.producer_cumulative.pfizer.length - 1] + item);
+        this.producer_cumulative.others.push(this.producer_cumulative.others[this.producer_cumulative.others.length - 1])
     }
 
     clear = () => {
         this.region = '';
-        this.delivery_cumulative = [];
-        this.delivery_variation = [];
-        this.pfizer_cumulative = [];
+        this.delivery_cumulative = [0];
+        this.delivery_variation = [0];
+        this.producer_cumulative.pfizer = [0];
+        this.producer_cumulative.others = [0];
     }
 }
 
