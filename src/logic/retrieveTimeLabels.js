@@ -21,7 +21,7 @@ const DateLabels = (range) => {
     if(dates !== null){
 
         dataToReturn.dateLabels = [];
-        dataToReturn.dateLabelsComplete = dates;
+        dataToReturn.dateLabelsComplete = [];
 
         if( dataToReturn){
             let start = range === -1 || range === undefined ? 1 : dates.length - range;
@@ -29,6 +29,9 @@ const DateLabels = (range) => {
             for (let i = start; i < dates.length; i+=incr){
                 i = Math.round(i)
                 dataToReturn.dateLabels.push(dates[i]);
+            }
+            for(let i = start;  i < dates.length; i++){
+                dataToReturn.dateLabelsComplete.push(dates[i]);
             }
         }
 
