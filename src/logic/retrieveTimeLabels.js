@@ -15,23 +15,20 @@ let dataToReturn = {
 
 const DateLabels = (range) => {
 
-    let data = Records.getRecords();
+    let dates = Records.getDates();
 
 
-    if(data !== null){
+    if(dates !== null){
 
         dataToReturn.dateLabels = [];
-        dataToReturn.dateLabelsComplete = [];
+        dataToReturn.dateLabelsComplete = dates;
 
         if( dataToReturn){
-            let start = range === -1 || range === undefined ? 1 : data.length - range;
-            let incr = Math.round(((data.length - start)) / lineChartNumLabels(range));
-            for (let i = start; i < data.length; i+=incr){
+            let start = range === -1 || range === undefined ? 1 : dates.length - range;
+            let incr = Math.round(((dates.length - start)) / lineChartNumLabels(range));
+            for (let i = start; i < dates.length; i+=incr){
                 i = Math.round(i)
-                dataToReturn.dateLabels.push(dateToString(data.dates[i]));
-            }
-            for (let i = start; i < data.length; i++){
-                dataToReturn.dateLabelsComplete.push(dateToString(data.dates[i]));
+                dataToReturn.dateLabels.push(dates[i]);
             }
         }
 

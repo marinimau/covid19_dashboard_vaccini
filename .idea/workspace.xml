@@ -12,10 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="consegne plottate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDelivery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDelivery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/deliveryChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/generateDateArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/generateDateArray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dateToString.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dateToString.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,13 +111,6 @@
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
       <workItem from="1612002236589" duration="4193000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1595078622516</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1595078622516</updated>
     </task>
     <task id="LOCAL-00002" summary="header in home">
       <created>1595082159705</created>
@@ -455,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612204846003</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="consegne plottate">
+      <created>1612206503197</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1612206503199</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,14 +510,14 @@
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612001231032" />
-    <state x="367" y="186" key="Vcs.Push.Dialog.v2" timestamp="1612204967418">
+    <state x="367" y="186" key="Vcs.Push.Dialog.v2" timestamp="1612206504629">
       <screen x="61" y="25" width="1379" height="875" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611997873540" />
     <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1612181490322" />
-    <state x="367" y="186" key="Vcs.Push.Dialog.v2/61.25.1379.875@61.25.1379.875" timestamp="1612204967418" />
+    <state x="367" y="186" key="Vcs.Push.Dialog.v2/61.25.1379.875@61.25.1379.875" timestamp="1612206504629" />
     <state x="371" y="186" key="Vcs.Push.Dialog.v2/66.25.1374.875@66.25.1374.875" timestamp="1612204847302" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />

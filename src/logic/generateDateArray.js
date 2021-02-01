@@ -12,9 +12,10 @@ let array_dates = [];
 const DateArray = () => {
     let currentDate = new Date('2020-12-15T00:00:00Z');
     while (new Date(currentDate) <= Date.now()) {
-        array_dates.push(dateToString(currentDate.toString()));
+        array_dates.push(dateToString(currentDate));
         currentDate = new Date(currentDate).setDate( new Date(currentDate).getDate() + 1);
     }
+    console.log(array_dates)
     return array_dates;
 };
 

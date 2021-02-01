@@ -31,6 +31,10 @@ let Records = {
         return this.data;
     },
 
+    getDates(){
+        return this.data.dates;
+    }
+
 };
 
 export default Records;
