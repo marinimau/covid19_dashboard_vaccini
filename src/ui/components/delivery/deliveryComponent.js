@@ -6,7 +6,7 @@
  */
 
 import React, {Component} from 'react';
-import {Text, View} from "react-native";
+import {Text, View, Switch} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import {chartTitles, dataDescription, deliveryChartDescriptions, deliveryChartTitles} from "../../contents/strings";
@@ -15,6 +15,7 @@ import LegendColors from "../../theme/legendColors";
 import DeliveryChartAttributes from "../../../logic/delivery/deliveryChartAttributes";
 import LineChartCard from "../cards/lineChartCard";
 import {EventRegister} from "react-native-event-listeners";
+import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 
 let dataChangedListener;
@@ -23,7 +24,32 @@ class DeliveryComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: DeliveryChartAttributes(), color: LegendColors.indigo, value: 0}
+        this.state = {
+            data: DeliveryChartAttributes(),
+            color: LegendColors.indigo,
+            value: 0,
+            percentageForRepartition: false,
+            totalChartTitle: deliveryChartTitles.repartitionAbsolute,
+            totalChartDescription: deliveryChartDescriptions.repartitionAbsolute,
+        }
+    }
+
+    repartitionSwitchChange(){
+        if(!this.state.percentageForTotal){
+            this.setState({
+                percentageForTotal: true,
+                totalChartTitle: deliveryChartTitles.repartitionPercentage,
+                totalChartDescription: deliveryChartDescriptions.repartitionPercentage
+            })
+        }
+        else {
+            this.setState({
+                percentageForTotal: false,
+                totalChartTitle: deliveryChartTitles.repartitionAbsolute,
+                totalChartDescription: deliveryChartDescriptions.repartitionAbsolute
+            })
+        }
+
     }
 
     componentDidMount() {
@@ -65,6 +91,41 @@ class DeliveryComponent extends Component {
                             color={this.state.color}
                             data={this.state.data.deliveryVariation}
                             description={deliveryChartDescriptions.variationTrend} />
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{this.state.totalChartTitle}</Text>
+                            <View style={[{flexDirection: "row"}]}>
+                                <Text style={[styles.chartManipulationDescription]}>
+                                    {dataDescription.showPercentage}
+                                </Text>
+                                <Switch
+                                    key={3}
+                                    style={{marginLeft: 6}}
+                                    onValueChange={() => this.repartitionSwitchChange()}
+                                    value={this.state.percentageForTotal}
+                                />
+                            </View>
+                            {
+                                this.state.percentageForTotal ?
+                                    <StackedAreaChart
+                                        key={0}
+                                        color={LegendColors.indigo}
+                                        colors={[LegendColors.indigo, LegendColors.pink]}
+                                        keyValues={['pfizer', 'others']}
+                                        legend={deliveryChartDescriptions.producer}
+                                        data={this.state.data.producerRepartitionPercentage}/>
+                                    :
+                                    <StackedAreaChart
+                                        key={1}
+                                        color={LegendColors.indigo}
+                                        colors={[LegendColors.indigo, LegendColors.pink]}
+                                        keyValues={['pfizer', 'others']}
+                                        legend={deliveryChartDescriptions.producer}
+                                        data={this.state.data.producerRepartition}/>
+
+                            }
+                            <Text style={styles.chartDescription}>{this.state.totalChartDescription}</Text>
+                        </View>
                     </>
             </MainScrollableContents>
         )

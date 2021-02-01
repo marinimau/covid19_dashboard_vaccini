@@ -76,7 +76,7 @@ class MyStackAreaChart extends React.PureComponent {
     render() {
 
         const colorRGB = hexToRgb(this.props.color);
-        const colors = this.props.colors === undefined ? [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`] : this.deOpacizeColors(this.props.colors)
+        const colors = this.props.colors === undefined ? [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`] : this.props.colors
         const keys = this.props.keyValues
         const axesSvg = {fontSize: 12, fill: (darkMode() ? Colors.darkMode_basic : Colors.basic)};
         const gridSvg = {
@@ -121,7 +121,6 @@ class MyStackAreaChart extends React.PureComponent {
                             data={this.state.data}
                             keys={keys}
                             colors={colors}
-
                             curve={shape.curveLinear}
                             animationDuration={200}
                             numberOfTicks={5}
@@ -129,7 +128,7 @@ class MyStackAreaChart extends React.PureComponent {
                         >
                             <Grid
                                 direction={Grid.Direction.HORIZONTAL}
-                                belowChart={true}
+                                belowChart={false}
                                 svg={gridSvg}
                             />
                         </StackedAreaChart>
@@ -159,16 +158,12 @@ class MyStackAreaChart extends React.PureComponent {
                 {/* Legend */}
                 <View style={styles.legendExternalContainer}>
                     <ChartColorLegend
-                        title={this.props.legend[2]}
+                        title={this.props.legend[0]}
                         color={colors[0]}/>
 
                     <ChartColorLegend
                         title={this.props.legend[1]}
                         color={colors[1]}/>
-
-                    <ChartColorLegend
-                        title={this.props.legend[0]}
-                        color={colors[2]}/>
 
                 </View>
 

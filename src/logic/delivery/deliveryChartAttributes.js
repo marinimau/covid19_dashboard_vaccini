@@ -15,15 +15,41 @@ let dataToReturn = {
     lastVariationPercentage: 0,
     deliveryCumulative: [],
     deliveryVariation: [],
+    producerRepartition: [],
+    producerRepartitionPercentage: []
 };
 
 export function cleanData() {
     dataToReturn.newCasesTrendAbsolute = [];
     dataToReturn.newCasesTrendDayValue = [];
-    dataToReturn.r0Trend = [];
+    dataToReturn.producerRepartition = [];
+    dataToReturn.producerRepartitionPercentage = [];
 }
 
-const DeliveryChartAttributes = (data) => {
+function populateRepartition(){
+    dataToReturn.producerRepartition = [];
+    dataToReturn.producerRepartitionPercentage = [];
+    let dates = Records.getDates();
+    let current =  Records.getRecords().delivery.regions[SelectedLocation.getLocation()].producer_cumulative;
+    for(let i = 0; i <  current.pfizer.length - 1; i++){
+        dataToReturn.producerRepartition.push(
+            {
+                date: dates[i],
+                pfizer: current.pfizer[i],
+                others: current.others[i]
+            }
+        );
+        dataToReturn.producerRepartitionPercentage.push(
+            {
+                date: dates[i],
+                pfizer: current.pfizer[i] === 0 ? 0 : current.pfizer[i] / (current.pfizer[i]  + current.others[i]) * 100,
+                others: current.others[i]  === 0 ? 0 : current.others[i] / (current.pfizer[i]  + current.others[i]) * 100,
+            }
+        )
+    }
+}
+
+const DeliveryChartAttributes = () => {
     dataToReturn.totalDelivered = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative.length - 1];
@@ -38,7 +64,9 @@ const DeliveryChartAttributes = (data) => {
         .delivery_cumulative[Records.getRecords().delivery.regions[0].delivery_cumulative.length - 1] * 100;
     dataToReturn.percentageOfTotal = (Math.round(percentage*100)/100).toFixed(2);
     dataToReturn.deliveryCumulative = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_cumulative;
-    dataToReturn.deliveryVariation = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_variation
+    dataToReturn.deliveryVariation = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_variation;
+    populateRepartition();
+    console.log(dataToReturn.producerRepartition)
     return dataToReturn;
 };
 
