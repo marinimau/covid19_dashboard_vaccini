@@ -11,18 +11,16 @@ import LegendColors from "../../ui/theme/legendColors";
 import {styles} from "../../ui/theme/style";
 import {Text, View} from "react-native";
 import {cardTitles} from "../../ui/contents/strings";
-import latestUpdateData from "../../logic/latestUpdateData";
 import {ShadowOpacity} from "../../ui/contents/params";
+import DeliveryChartAttributes from "../../logic/delivery/deliveryChartAttributes";
 
 export default class CardDelivery extends Component{
-
-
     render() {
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {backgroundColor: LegendColors.indigo, shadowColor: LegendColors.indigo, shadowOpacity: ShadowOpacity}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{cardTitles.delivery}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().totalCases}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().newCases} ({latestUpdateData().totalCasesVariationPercentage}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{DeliveryChartAttributes().totalDelivered.toLocaleString('it')}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>+{DeliveryChartAttributes().lastVariation.toLocaleString('it')} (+{DeliveryChartAttributes().lastVariationPercentage}%)</Text>
             </View>
         );
     }

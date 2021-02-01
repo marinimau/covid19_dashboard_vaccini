@@ -5,11 +5,14 @@
  * Location: Baratili San Pietro
  */
 
-import Records from "./dataset";
-import SelectedLocation from "./selectedLocation";
+import Records from "../dataset";
+import SelectedLocation from "../selectedLocation";
 
 let dataToReturn = {
     percentageOfTotal: 0,
+    totalDelivered: 0,
+    lastVariation: 0,
+    lastVariationPercentage: 0,
     deliveryCumulative: [],
     deliveryVariation: [],
 };
@@ -21,6 +24,14 @@ export function cleanData() {
 }
 
 const DeliveryChartAttributes = (data) => {
+    dataToReturn.totalDelivered = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
+        .delivery_cumulative[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
+        .delivery_cumulative.length - 1];
+    dataToReturn.lastVariation = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
+        .delivery_variation[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
+        .delivery_variation.length - 1];
+    dataToReturn.lastVariationPercentage = dataToReturn.lastVariation === 0 ? 0 :
+        (Math.round((dataToReturn.lastVariation / dataToReturn.totalDelivered * 100)*100)/100).toFixed(2);
     let percentage = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative.length - 1] / Records.getRecords().delivery.regions[0]

@@ -12,7 +12,7 @@ import MainScrollableContents from "../mainScrollableContainer";
 import {chartTitles, dataDescription, deliveryChartDescriptions, deliveryChartTitles} from "../../contents/strings";
 import CardDelivery from "../../../data_representation/resume_cards/cardDelivery";
 import LegendColors from "../../theme/legendColors";
-import DeliveryChartAttributes from "../../../logic/deliveryChartAttributes";
+import DeliveryChartAttributes from "../../../logic/delivery/deliveryChartAttributes";
 import LineChartCard from "../cards/lineChartCard";
 import {EventRegister} from "react-native-event-listeners";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
