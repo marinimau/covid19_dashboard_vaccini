@@ -4,14 +4,6 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
-
-/**
- * covid19_dashboard copyright © 2020
- * Created by mauromarini on 30/07/20
- * Repository: http://github.com/marinimau/covid19_dashboard
- * Location: Baratili San Pietro
- */
-
 import Records from "./dataset";
 import dateToString from "../utils/dateToString";
 import {lineChartNumLabels} from "../ui/contents/params";
@@ -36,10 +28,10 @@ const DateLabels = (range) => {
             let incr = Math.round(((data.length - start)) / lineChartNumLabels(range));
             for (let i = start; i < data.length; i+=incr){
                 i = Math.round(i)
-                dataToReturn.dateLabels.push(dateToString(data[i]['data']));
+                dataToReturn.dateLabels.push(dateToString(data.dates[i]));
             }
             for (let i = start; i < data.length; i++){
-                dataToReturn.dateLabelsComplete.push(dateToString(data[i]['data']));
+                dataToReturn.dateLabelsComplete.push(dateToString(data.dates[i]));
             }
         }
 

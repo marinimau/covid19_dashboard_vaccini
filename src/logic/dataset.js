@@ -5,16 +5,16 @@
  * Location: Baratili San Pietro
  */
 
-import SelectedLocation from "./selectedLocation";
 import Preprocessing from "./delivery/preprocessing";
+import DateArray from "./generateDateArray";
 
 let Records = {
 
     data: {
+        dates: [],
         delivery: [],
         administration: [],
     },
-    singleRegionData: [],
 
     setAdministrationRecords(records){
         this.data.administration = records;
@@ -23,19 +23,12 @@ let Records = {
 
     setDeliveryRecords(records){
         this.data.delivery = Preprocessing(records);
+        this.data.dates = DateArray();
         console.log(this.data.delivery);
     },
 
     getRecords(){
-        console.log('location index: ' + SelectedLocation.getLocation());
-
-        if(SelectedLocation.getLocation() <= 0){
-            console.log(this.data);
-            return this.data;
-        }
-        else {
-
-        }
+        return this.data;
     },
 
 };

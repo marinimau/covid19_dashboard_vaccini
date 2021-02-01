@@ -7,6 +7,7 @@
 import {compareDateUsingDaysFromDay0, daysFromDay0} from "../../utils/dateDifference";
 import DeliveryData from "./delivery_data";
 import DeliveryAttrs from "./delivery_attrs";
+import divideByRegion from "../common/preprocessing";
 
 function organizeByDate(data){
     let dataset = new DeliveryData();
@@ -52,8 +53,7 @@ function createAllItalyResume(data){
             cumulative += data.regions[j].delivery_cumulative[i];
             variation += data.regions[j].delivery_variation[i];
             pfizer_cumulative += data.regions[j].producer_cumulative.pfizer[i];
-            others_comulative += data.return[j].producer_cumulative.others[i];
-
+            others_comulative += data.regions[j].producer_cumulative.others[i];
         }
         data.regions[0].delivery_cumulative.push(cumulative);
         data.regions[0].delivery_variation.push(variation);

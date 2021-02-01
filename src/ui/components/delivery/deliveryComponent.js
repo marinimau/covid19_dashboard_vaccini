@@ -9,10 +9,10 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import {chartTitles, dataDescription} from "../../contents/strings";
+import {chartTitles, dataDescription, deliveryChartDescriptions, deliveryChartTitles} from "../../contents/strings";
 import CardDelivery from "../../../data_representation/resume_cards/cardDelivery";
 import LegendColors from "../../theme/legendColors";
-import NewCasesData from "../../../logic/newCasesData";
+import DeliveryChartAttributes from "../../../logic/deliveryChartAttributes";
 import LineChartCard from "../cards/lineChartCard";
 import {EventRegister} from "react-native-event-listeners";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
@@ -23,7 +23,7 @@ class DeliveryComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: NewCasesData(), color: LegendColors.indigo, value: 0}
+        this.state = { data: DeliveryChartAttributes(), color: LegendColors.indigo, value: 0}
     }
 
     componentDidMount() {
@@ -37,7 +37,7 @@ class DeliveryComponent extends Component {
     }
 
     updateData(){
-        this.setState({data: NewCasesData()});
+        this.setState({data: DeliveryChartAttributes()});
     }
 
     render() {
@@ -47,24 +47,24 @@ class DeliveryComponent extends Component {
                         <CardDelivery />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.totalCasesPercentage}</Text>
+                            <Text style={[styles.chartTitle]}>{deliveryChartTitles.percentageOfTotal}</Text>
                             <MyProgressCircle value={this.state.data.percentageOfTotal} color={this.state.color}/>
-                            <Text style={styles.chartDescription}>{dataDescription.totalCasesPercentage}</Text>
+                            <Text style={styles.chartDescription}>{deliveryChartDescriptions.percentageOfTotal}</Text>
                         </View>
 
                         <LineChartCard
                             key={this.state.data}
-                            title={chartTitles.totalCasesCurve}
+                            title={deliveryChartTitles.cumulativeTrend}
                             color={this.state.color}
-                            data={this.state.data.newCasesTrendAbsolute}
-                            description={dataDescription.totalCases} />
+                            data={this.state.data.deliveryCumulative}
+                            description={deliveryChartDescriptions.cumulativeTrend} />
 
                         <LineChartCard
                             key={this.state.data}
-                            title={chartTitles.newCasesCurve}
+                            title={deliveryChartTitles.variationTrend}
                             color={this.state.color}
-                            data={this.state.data.newCasesTrendDayValue}
-                            description={dataDescription.newCases} />
+                            data={this.state.data.deliveryVariation}
+                            description={deliveryChartDescriptions.variationTrend} />
                     </>
             </MainScrollableContents>
         )

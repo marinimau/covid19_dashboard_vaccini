@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-function divideByRegion(data){
+export default function divideByRegion(data){
     let dataToReturn = [];
     let tmp = [];
     for(let i = 0; i < data.length; i++){
