@@ -42,6 +42,11 @@ export default class AdministrationsAttrs {
         this.administration_gender_cumulative.female.push(this.administration_gender_cumulative.female[this.administration_gender_cumulative.female.length - 1] + female);
     }
 
+    addDosageCumulative = (first, second) =>{
+        this.administration_dosage.first.push(this.administration_dosage.first[this.administration_dosage.first.length - 1] + first);
+        this.administration_dosage.second.push(this.administration_dosage.second[this.administration_dosage.second.length - 1] + second);
+    }
+
     addCategoriesCumulative = (healthcare_personnel, associated_healthcare_personnel, rsa_patients, over_80, other) => {
         this.administration_categories_cumulative.healthcare_personnel.push(this.administration_categories_cumulative.healthcare_personnel[this.administration_categories_cumulative.healthcare_personnel.length - 1] + healthcare_personnel);
         this.administration_categories_cumulative.associated_healthcare_personnel.push(this.administration_categories_cumulative.associated_healthcare_personnel[this.administration_categories_cumulative.associated_healthcare_personnel.length - 1] + associated_healthcare_personnel);

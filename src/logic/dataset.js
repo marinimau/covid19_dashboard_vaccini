@@ -5,8 +5,10 @@
  * Location: Baratili San Pietro
  */
 
-import Preprocessing from "./delivery/preprocessing";
+import DeliveryPreprocessing from "./delivery/preprocessing";
 import DateArray from "./generateDateArray";
+import dateToString from "../utils/dateToString";
+import AdministrationPreprocessing from "./administration/preprocessing";
 
 let Records = {
 
@@ -17,14 +19,13 @@ let Records = {
     },
 
     setAdministrationRecords(records){
-        this.data.administration = records;
-
+        this.data.administration = AdministrationPreprocessing(records);
+        console.log(this.data.administration)
     },
 
     setDeliveryRecords(records){
-        this.data.delivery = Preprocessing(records);
+        this.data.delivery = DeliveryPreprocessing(records);
         this.data.dates = DateArray();
-        console.log(this.data.delivery);
     },
 
     getRecords(){
@@ -33,6 +34,10 @@ let Records = {
 
     getDates(){
         return this.data.dates;
+    },
+
+    getLastDate(){
+        return dateToString(this.data.dates[this.data.dates.length - 1]);
     }
 
 };

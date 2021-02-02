@@ -66,7 +66,6 @@ const DeliveryChartAttributes = () => {
     dataToReturn.deliveryCumulative = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_cumulative;
     dataToReturn.deliveryVariation = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_variation;
     populateRepartition();
-    console.log(dataToReturn.producerRepartition)
     return dataToReturn;
 };
 

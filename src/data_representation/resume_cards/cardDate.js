@@ -9,7 +9,8 @@ import React, {Component} from 'react';
 import {styles} from "../../ui/theme/style";
 import {Text, View} from "react-native";
 import {chartTitles, dataDescription} from "../../ui/contents/strings";
-import latestUpdateData from "../../logic/latestUpdateData";
+import Records from "../../logic/dataset";
+
 
 export default class CardDate extends Component{
 
@@ -17,7 +18,7 @@ export default class CardDate extends Component{
     render() {
         return (
             <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                <Text style={[styles.chartTitle]}>{chartTitles.lastUpdateDate}{latestUpdateData().lastUpdateDate}</Text>
+                <Text style={[styles.chartTitle]}>{chartTitles.lastUpdateDate}{Records.getLastDate()}</Text>
                 <Text style={[styles.indicatorValue, styles.chartDescription]}>{dataDescription.lastUpdate}</Text>
             </View>
         );

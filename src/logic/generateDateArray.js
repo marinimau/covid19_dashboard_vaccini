@@ -15,7 +15,6 @@ const DateArray = () => {
         array_dates.push(dateToString(currentDate));
         currentDate = new Date(currentDate).setDate( new Date(currentDate).getDate() + 1);
     }
-    console.log(array_dates)
     return array_dates;
 };
 

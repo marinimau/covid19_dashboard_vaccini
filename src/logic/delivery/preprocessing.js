@@ -63,6 +63,6 @@ function createAllItalyResume(data){
     return data
 }
 
-export default function Preprocessing(data){
+export default function DeliveryPreprocessing(data){
     return createAllItalyResume(organizeByDate(divideByRegion(data)));
 }
