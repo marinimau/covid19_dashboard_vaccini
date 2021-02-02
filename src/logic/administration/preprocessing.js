@@ -22,7 +22,6 @@ function organizeByDate(data){
         for(let i = 0; i < daysFromDay0(); i++) {
             let tmp_gender = {male: 0, female: 0}, tmp_dosage = {first: 0, second: 0},
                 tmp_categories = {healthcare: 0, associated_healthcare: 0, rsa: 0, over80: 0, others: 0};
-            console.log(data[r]);
             //while date equals to today
             while(index < data[r].length && compareDateUsingDaysFromDay0(i, data[r][index]["data_somministrazione"])) {
                 //gender
@@ -91,5 +90,6 @@ function createAllItalyResume(data){
 }
 
 export default function AdministrationPreprocessing(data){
+    console.log(data);
     return createAllItalyResume(organizeByDate(divideByRegion(data)));
 }

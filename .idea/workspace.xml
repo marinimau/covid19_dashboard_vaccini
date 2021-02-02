@@ -11,16 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="modificati 2 grafici">
-      <change afterPath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/administration/administrations_attrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrations_attrs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/common/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/common/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/generateDateArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/generateDateArray.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -430,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611997869347</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="modificati 2 grafici">
+      <created>1612265134013</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1612265134013</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,28 +481,12 @@
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612001231032" />
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1603446676155">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1603446676155">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1603446676154">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1603446676154" />
-    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1603446676155">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1611997873540">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612265136008">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611997873540" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612265136008" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>

@@ -12,7 +12,7 @@ export default function divideByRegion(data){
     for(i = 0; i < data.length; i++){
         if(i !== 0 && data[i]["area"] !== data[i-1]["area"]){
             if(count_regions > 20){
-                dataToReturn[i % 21] += tmp
+                dataToReturn[i % 21].concat(tmp)
             } else {
                 dataToReturn.push(tmp);
             }
@@ -22,7 +22,7 @@ export default function divideByRegion(data){
         tmp.push(data[i]);
     }
     if(count_regions > 20){
-        dataToReturn[i % 21] += tmp
+        dataToReturn[i % 21].concat(tmp)
     } else {
         dataToReturn.push(tmp);
     }
