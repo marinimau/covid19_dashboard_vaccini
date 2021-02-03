@@ -1,8 +1,8 @@
 {
   "expo": {
     "userInterfaceStyle": "automatic",
-    "name": "Covid 19 Italy",
-    "slug": "covid19_dashboard",
+    "name": "Covid 19 Italia - Vaccini",
+    "slug": "covid19_dashboard_vaccini",
     "version": "1.0.0",
     "orientation": "portrait",
     "privacy": "public",
