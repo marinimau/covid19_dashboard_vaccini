@@ -19,7 +19,7 @@ export default class CardDelivery extends Component{
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {backgroundColor: LegendColors.indigo, shadowColor: LegendColors.indigo, shadowOpacity: ShadowOpacity}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{cardTitles.delivery}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{DeliveryChartAttributes().totalDelivered.toLocaleString('it')}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{DeliveryChartAttributes().total.toLocaleString('it')}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>+{DeliveryChartAttributes().lastVariation.toLocaleString('it')} (+{DeliveryChartAttributes().lastVariationPercentage}%)</Text>
             </View>
         );

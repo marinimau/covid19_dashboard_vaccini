@@ -45,3 +45,9 @@ export default function dateToString(date) {
     return splitted[2] + '/' + replaceMonth(splitted[1]) + '/' + splitted[3];
 }
 
+
+export function dateNormalized(date) {
+    date = new Date(date).toDateString();
+    const splitted = date.split(' ');
+    return splitted[2] + '/' + splitted[1] + '/' + splitted[3];
+}

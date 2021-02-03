@@ -37,7 +37,7 @@ let Records = {
     },
 
     getLastDate(){
-        return dateToString(this.data.dates[this.data.dates.length - 1]);
+        return dateToString(Date.now());
     }
 
 };

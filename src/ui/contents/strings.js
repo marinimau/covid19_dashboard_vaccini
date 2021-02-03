@@ -53,6 +53,24 @@ export const deliveryChartDescriptions = {
     producer: ['Pfizer Inc', 'Altri']
 }
 
+
+export const administrationChartTitles = {
+    percentageOfTotal: 'Percentuale sul totale nazionale',
+    cumulativeTrend: 'Andamento vaccini somministrati (cumulativo)',
+    variationTrend: 'Andamento vaccini somministrati (variazione giornaliera)',
+    genderRepartitionAbsolute: 'Ripartizione per genere (valore assoluto)',
+    genderRepartitionPercentage: 'Ripartizione per genere (valore percentuale)',
+}
+
+export const administrationChartDescriptions = {
+    percentageOfTotal: 'percentuale di dosi consegnate nell\'area selezionata rispetto al totale nazionale',
+    cumulativeTrend: 'Conteggio cumulativo delle dosi di vaccino somministrate nel corso del tempo',
+    variationTrend: 'Numero giornaliero di dosi di vaccino somministrate nel corso del tempo',
+    genderRepartitionAbsolute: 'Ripartizione delle dosi somministrate per genere (valore assoluto)',
+    genderRepartitionPercentage: 'Ripartizione delle dosi somministrate per genere (valore percentuale)',
+    gender: ['Sesso maschile', 'Sesso femminile']
+}
+
 export const chartTitles = {
     locationSelectorPlaceholder: 'Cambia regione...',
     allItaly: 'Tutta Italia',

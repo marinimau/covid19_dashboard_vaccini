@@ -5,40 +5,22 @@
  * Location: Baratili San Pietro
  */
 
-export default function divideByRegion(data){
-    let dataToReturn = [];
-    let tmp = [];
-    let count_regions = 0, i;
-    for(i = 0; i < data.length; i++){
-        if(i !== 0 && data[i]["area"] !== data[i-1]["area"]){
-            if(count_regions > 20){
-                dataToReturn[i % 21].concat(tmp)
-            } else {
-                dataToReturn.push(tmp);
-            }
-            count_regions ++;
-            tmp = [];
-        }
-        tmp.push(data[i]);
-    }
-    if(count_regions > 20){
-        dataToReturn[i % 21].concat(tmp)
-    } else {
-        dataToReturn.push(tmp);
-    }
-    return dataToReturn.length === 21 ? dataToReturn : [];
+function getIndex(area) {
+    let areas = ['ABR', 'BAS', 'CAL', 'CAM', 'EMR', 'FVG', 'LAZ', 'LIG', 'LOM', 'MAR', 'MOL', 'PAB', 'PAT', 'PIE', 'PUG', 'SAR', 'SIC', 'TOS', 'UMB', 'VDA', 'VEN']
+    return areas.indexOf(area);
 }
 
-export function simpleDivision(data){
-    let dataToReturn = [];
-    let tmp = [];
-    for(let i = 0; i < data.length; i++){
-        if(i !== 0 && data[i]["area"] !== data[i-1]["area"]){
-            dataToReturn.push(tmp);
-            tmp = [];
+export default function divideByRegion(data){
+    let dataToReturn = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+    let index = 0, i;
+    // scroll al records (there are records with different areas at the same level)
+    // ex (a = area): [{a1, 1}, ... {a1, n}, ... {ak, 1}, ... {ak, n}, {a1, n+1}, ... {a1, n+x}, ...]
+    // i.e. it's not granted that there are all regions at each round
+    for(i = 0; i < data.length; i++){
+        index = getIndex(data[i]["area"]);
+        if(index !== -1){
+            dataToReturn[index].push(data[i]);
         }
-        tmp.push(data[i]);
     }
-    dataToReturn.push(tmp);
     return dataToReturn.length === 21 ? dataToReturn : [];
 }

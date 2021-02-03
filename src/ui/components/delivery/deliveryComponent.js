@@ -82,14 +82,14 @@ class DeliveryComponent extends Component {
                             key={this.state.data}
                             title={deliveryChartTitles.cumulativeTrend}
                             color={this.state.color}
-                            data={this.state.data.deliveryCumulative}
+                            data={this.state.data.cumulativeTrend}
                             description={deliveryChartDescriptions.cumulativeTrend} />
 
                         <LineChartCard
                             key={this.state.data}
                             title={deliveryChartTitles.variationTrend}
                             color={this.state.color}
-                            data={this.state.data.deliveryVariation}
+                            data={this.state.data.variationTrend}
                             description={deliveryChartDescriptions.variationTrend} />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>

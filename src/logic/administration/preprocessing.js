@@ -5,8 +5,8 @@
  * Location: Baratili San Pietro
  */
 import {compareDateUsingDaysFromDay0, daysFromDay0} from "../../utils/dateDifference";
-import AdministrationData from "./administration_data";
-import AdministrationsAttrs from "./administrations_attrs";
+import AdministrationData from "./administrationData";
+import AdministrationsAttrs from "./administrationsAttrs";
 import divideByRegion from "../common/preprocessing";
 
 function organizeByDate(data){
@@ -90,6 +90,5 @@ function createAllItalyResume(data){
 }
 
 export default function AdministrationPreprocessing(data){
-    console.log(data);
     return createAllItalyResume(organizeByDate(divideByRegion(data)));
 }

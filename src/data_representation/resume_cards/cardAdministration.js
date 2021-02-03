@@ -10,8 +10,8 @@ import LegendColors from "../../ui/theme/legendColors";
 import {styles} from "../../ui/theme/style";
 import {Text, View} from "react-native";
 import {cardTitles} from "../../ui/contents/strings";
-import latestUpdateData from "../../logic/latestUpdateData";
 import {ShadowOpacity} from "../../ui/contents/params";
+import AdministrationChartAttributes from "../../logic/administration/administrationChartAttributes";
 
 export default class CardAdministration extends Component{
 
@@ -19,8 +19,8 @@ export default class CardAdministration extends Component{
         return (
             <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {backgroundColor: LegendColors.pink, shadowColor: LegendColors.pink, shadowOpacity: ShadowOpacity}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{cardTitles.administration}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().totalCurrentCases}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr, styles.indicatorLight]}>{latestUpdateData().currentCasesVariation} ({latestUpdateData().currentCasesVariationPercentage}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{AdministrationChartAttributes().total.toLocaleString('it')}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr, styles.indicatorLight]}>+{AdministrationChartAttributes().lastVariation.toLocaleString('it')} (+{AdministrationChartAttributes().lastVariationPercentage}%)</Text>
             </View>
         );
     }

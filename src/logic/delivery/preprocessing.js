@@ -5,8 +5,8 @@
  * Location: Baratili San Pietro
  */
 import {compareDateUsingDaysFromDay0, daysFromDay0} from "../../utils/dateDifference";
-import DeliveryData from "./delivery_data";
-import DeliveryAttrs from "./delivery_attrs";
+import DeliveryData from "./deliveryData";
+import DeliveryAttrs from "./deliveryAttrs";
 import divideByRegion from "../common/preprocessing";
 
 function organizeByDate(data){

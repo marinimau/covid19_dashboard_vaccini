@@ -10,11 +10,11 @@ import SelectedLocation from "../selectedLocation";
 
 let dataToReturn = {
     percentageOfTotal: 0,
-    totalDelivered: 0,
+    total: 0,
     lastVariation: 0,
     lastVariationPercentage: 0,
-    deliveryCumulative: [],
-    deliveryVariation: [],
+    cumulativeTrend: [],
+    variationTrend: [],
     producerRepartition: [],
     producerRepartitionPercentage: []
 };
@@ -50,7 +50,7 @@ function populateRepartition(){
 }
 
 const DeliveryChartAttributes = () => {
-    dataToReturn.totalDelivered = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
+    dataToReturn.total = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative.length - 1];
     dataToReturn.lastVariation = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
@@ -63,8 +63,8 @@ const DeliveryChartAttributes = () => {
         .delivery_cumulative.length - 1] / Records.getRecords().delivery.regions[0]
         .delivery_cumulative[Records.getRecords().delivery.regions[0].delivery_cumulative.length - 1] * 100;
     dataToReturn.percentageOfTotal = (Math.round(percentage*100)/100).toFixed(2);
-    dataToReturn.deliveryCumulative = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_cumulative;
-    dataToReturn.deliveryVariation = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_variation;
+    dataToReturn.cumulativeTrend = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_cumulative;
+    dataToReturn.variationTrend = Records.getRecords().delivery.regions[SelectedLocation.getLocation()].delivery_variation;
     populateRepartition();
     return dataToReturn;
 };
