@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "http://marinimau.github.io/covid19_dashboard",
+  "homepage": "http://marinimau.github.io/covid19_dashboard_vaccini",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

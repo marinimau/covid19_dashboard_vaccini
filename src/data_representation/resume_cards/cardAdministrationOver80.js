@@ -17,7 +17,7 @@ export default class CardAdministrationOver80 extends Component{
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                 <Text style={[styles.chartTitle]}>{cardTitles.administrationOver80}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.over80.toLocaleString('it')} ({AdministrationChartAttributes().categories.over80.toLocaleString('it')}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.over80.toLocaleString('it')} ({AdministrationChartAttributes().categories.over80_percentage.toLocaleString('it')}%)</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>+{AdministrationChartAttributes().categories.over80_variation.toLocaleString('it')} (+{AdministrationChartAttributes().categories.over80_variation_percentage.toLocaleString('it')}%)</Text>
             </View>
         );

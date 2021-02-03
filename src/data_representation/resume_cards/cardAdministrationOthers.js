@@ -17,7 +17,7 @@ export default class CardAdministrationOthers extends Component{
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                 <Text style={[styles.chartTitle]}>{cardTitles.administrationOther}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.others.toLocaleString('it')} ({AdministrationChartAttributes().categories.others.toLocaleString('it')}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.others.toLocaleString('it')} ({AdministrationChartAttributes().categories.others_percentage.toLocaleString('it')}%)</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>+{AdministrationChartAttributes().categories.others_variation.toLocaleString('it')} (+{AdministrationChartAttributes().categories.others.toLocaleString('it')}%)</Text>
             </View>
         );
