@@ -20,6 +20,11 @@ import LineChartCard from "../cards/lineChartCard";
 import AdministrationChartAttributes from "../../../logic/administration/administrationChartAttributes";
 import {EventRegister} from "react-native-event-listeners";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
+import CardAdministrationAssociated from "../../../data_representation/resume_cards/cardAdministrationAssociated";
+import CardAdministrationHealtcare from "../../../data_representation/resume_cards/cardAdministrationHealtcare";
+import CardAdministrationRsa from "../../../data_representation/resume_cards/cardAdministrationRsa";
+import CardAdministrationOver80 from "../../../data_representation/resume_cards/cardAdministrationOver80";
+import CardAdministrationOthers from "../../../data_representation/resume_cards/cardAdministrationOverOthers";
 
 let dataChangedListener;
 
@@ -33,7 +38,11 @@ class AdministrationComponent extends Component {
             value: 0,
             percentageForGenderRepartition: false,
             genderRepartitionTitle: administrationChartTitles.genderRepartitionAbsolute,
-            genderRepartitionDescription: administrationChartDescriptions.genderRepartitionAbsolute,}
+            genderRepartitionDescription: administrationChartDescriptions.genderRepartitionAbsolute,
+            percentageForDosageRepartition: false,
+            dosageRepartitionTitle: administrationChartTitles.dosageRepartitionAbsolute,
+            dosageRepartitionDescription: administrationChartDescriptions.dosageRepartitionAbsolute,
+        }
     }
 
     genderRepartitionSwitchChange(){
@@ -49,6 +58,24 @@ class AdministrationComponent extends Component {
                 percentageForGenderRepartition: false,
                 genderRepartitionTitle: administrationChartTitles.genderRepartitionAbsolute,
                 genderRepartitionDescription: administrationChartDescriptions.genderRepartitionAbsolute
+            })
+        }
+
+    }
+
+    dosageRepartitionSwitchChange(){
+        if(!this.state.percentageForDosageRepartition){
+            this.setState({
+                percentageForDosageRepartition: true,
+                dosageRepartitionTitle: administrationChartTitles.dosageRepartitionPercentage,
+                dosageRepartitionDescription: administrationChartDescriptions.dosageRepartitionPercentage,
+            })
+        }
+        else {
+            this.setState({
+                percentageForDosageRepartition: false,
+                dosageRepartitionTitle: administrationChartTitles.dosageRepartitionAbsolute,
+                dosageRepartitionDescription: administrationChartDescriptions.dosageRepartitionAbsolute,
             })
         }
 
@@ -94,6 +121,16 @@ class AdministrationComponent extends Component {
                         data={this.state.data.variationTrend}
                         description={administrationChartDescriptions.variationTrend}/>
 
+                    <CardAdministrationHealtcare />
+
+                    <CardAdministrationAssociated />
+
+                    <CardAdministrationRsa />
+
+                    <CardAdministrationOver80 />
+
+                    <CardAdministrationOthers />
+
                     <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                         <Text style={styles.chartTitle}>{this.state.genderRepartitionTitle}</Text>
                         <View style={[{flexDirection: "row"}]}>
@@ -111,7 +148,7 @@ class AdministrationComponent extends Component {
                             this.state.percentageForGenderRepartition ?
                                 <StackedAreaChart
                                     key={0}
-                                    color={LegendColors.indigo}
+                                    color={LegendColors.pink}
                                     colors={[LegendColors.indigo, LegendColors.pink]}
                                     keyValues={['male', 'female']}
                                     legend={administrationChartDescriptions.gender}
@@ -119,7 +156,7 @@ class AdministrationComponent extends Component {
                                 :
                                 <StackedAreaChart
                                     key={1}
-                                    color={LegendColors.indigo}
+                                    color={LegendColors.pink}
                                     colors={[LegendColors.indigo, LegendColors.pink]}
                                     keyValues={['male', 'female']}
                                     legend={administrationChartDescriptions.gender}
@@ -128,19 +165,41 @@ class AdministrationComponent extends Component {
                         }
                         <Text style={styles.chartDescription}>{this.state.genderRepartitionDescription}</Text>
                     </View>
-                    {/*
-                    <CardHomeQuarantine />
 
-                    <CardHospitalizedWithSymptoms />
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                        <Text style={styles.chartTitle}>{this.state.dosageRepartitionTitle}</Text>
+                        <View style={[{flexDirection: "row"}]}>
+                            <Text style={[styles.chartManipulationDescription]}>
+                                {dataDescription.showPercentage}
+                            </Text>
+                            <Switch
+                                key={3}
+                                style={{marginLeft: 6}}
+                                onValueChange={() => this.dosageRepartitionSwitchChange()}
+                                value={this.state.percentageForDosageRepartition}
+                            />
+                        </View>
+                        {
+                            this.state.percentageForDosageRepartition ?
+                                <StackedAreaChart
+                                    key={0}
+                                    color={LegendColors.pink}
+                                    colors={[LegendColors.indigo, LegendColors.pink]}
+                                    keyValues={['first', 'second']}
+                                    legend={administrationChartDescriptions.dosage}
+                                    data={this.state.data.dosageRepartitionPercentage}/>
+                                :
+                                <StackedAreaChart
+                                    key={1}
+                                    color={LegendColors.pink}
+                                    colors={[LegendColors.indigo, LegendColors.pink]}
+                                    keyValues={['first', 'second']}
+                                    legend={administrationChartDescriptions.dosage}
+                                    data={this.state.data.dosageRepartition}/>
 
-                    <CardCritical />
-
-                    <LineChartCard
-                        title={chartTitles.criticalTrendAbsolute}
-                        color={this.state.color}
-                        data={this.state.data.criticalTrendAbsolute}
-                        description={dataDescription.criticalTrendAbsolute} />
-                        */}
+                        }
+                        <Text style={styles.chartDescription}>{this.state.dosageRepartitionDescription}</Text>
+                    </View>
 
                 </>
             </MainScrollableContents>

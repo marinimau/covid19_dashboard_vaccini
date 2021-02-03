@@ -16,7 +16,9 @@ let dataToReturn = {
     cumulativeTrend: [],
     variationTrend: [],
     genderRepartition: [],
-    genderRepartitionPercentage: []
+    genderRepartitionPercentage: [],
+    dosageRepartition: [],
+    dosageRepartitionPercentage: []
 };
 
 export function cleanData() {
@@ -24,6 +26,8 @@ export function cleanData() {
     dataToReturn.variationTrend = [];
     dataToReturn.genderRepartition = [];
     dataToReturn.genderRepartitionPercentage = [];
+    dataToReturn.dosageRepartition = [];
+    dataToReturn.dosageRepartitionPercentage = []
 }
 
 function populateGenderRepartition(){
@@ -49,6 +53,29 @@ function populateGenderRepartition(){
     }
 }
 
+function populateDosageRepartition(){
+    dataToReturn.dosageRepartition = [];
+    dataToReturn.dosageRepartitionPercentage = [];
+    let dates = Records.getDates();
+    let current =  Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_dosage;
+    for(let i = 0; i <  current.first.length - 1; i++){
+        dataToReturn.dosageRepartition.push(
+            {
+                date: dates[i],
+                first: current.first[i],
+                second: current.second[i]
+            }
+        );
+        dataToReturn.dosageRepartitionPercentage.push(
+            {
+                date: dates[i],
+                first: current.first[i] === 0 ? 0 : current.first[i] / (current.first[i]  + current.second[i]) * 100,
+                second: current.second[i]  === 0 ? 0 : current.second[i] / (current.first[i]  + current.second[i]) * 100,
+            }
+        )
+    }
+}
+
 const AdministrationChartAttributes = () => {
     dataToReturn.total = Records.getRecords().administration.regions[SelectedLocation.getLocation()]
         .administration_cumulative[Records.getRecords().administration.regions[SelectedLocation.getLocation()]
@@ -66,6 +93,7 @@ const AdministrationChartAttributes = () => {
     dataToReturn.cumulativeTrend = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_cumulative;
     dataToReturn.variationTrend = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_variation;
     populateGenderRepartition();
+    populateDosageRepartition();
     return dataToReturn;
 };
 

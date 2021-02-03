@@ -10,25 +10,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolto un bug nei dati">
-      <change afterPath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="inziato a plottare i dati sulle somministrazioni">
+      <change afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOverOthers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDelivery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDelivery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/administration/administration_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/administration/administrations_attrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationsAttrs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/common/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/common/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/delivery_attrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryAttrs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/delivery_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCritical.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationAssociated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardHomeQuarantine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationHealtcare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardHospitalizedWithSymptoms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/dateToString.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dateToString.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +53,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/logic/italy_open_source" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data_representation/resume_cards" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data_representation/resume_cards" />
+      <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
+      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/src/logic/region" />
       <recent name="$PROJECT_DIR$/src/logic/general" />
       <recent name="$PROJECT_DIR$/src/ui/components/header" />
       <recent name="$PROJECT_DIR$/src/ui/components/loading" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
-      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
@@ -122,7 +114,7 @@
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
-      <workItem from="1612340825853" duration="9198000" />
+      <workItem from="1612340825853" duration="12301000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -453,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612265428296</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="inziato a plottare i dati sulle somministrazioni">
+      <created>1612350713393</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1612350713393</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +471,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sistemata UI" />
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
     <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
@@ -497,19 +495,20 @@
     <MESSAGE value="risolto bug cursore con dati mancanti" />
     <MESSAGE value="modificati 2 grafici" />
     <MESSAGE value="risolto un bug nei dati" />
-    <option name="LAST_COMMIT_MESSAGE" value="risolto un bug nei dati" />
+    <MESSAGE value="inziato a plottare i dati sulle somministrazioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="inziato a plottare i dati sulle somministrazioni" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612347558996">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612347558996" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612265429403">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612350715207">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612265429403" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612350715207" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
