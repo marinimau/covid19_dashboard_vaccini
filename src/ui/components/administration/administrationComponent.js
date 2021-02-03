@@ -24,7 +24,7 @@ import CardAdministrationAssociated from "../../../data_representation/resume_ca
 import CardAdministrationHealtcare from "../../../data_representation/resume_cards/cardAdministrationHealtcare";
 import CardAdministrationRsa from "../../../data_representation/resume_cards/cardAdministrationRsa";
 import CardAdministrationOver80 from "../../../data_representation/resume_cards/cardAdministrationOver80";
-import CardAdministrationOthers from "../../../data_representation/resume_cards/cardAdministrationOverOthers";
+import CardAdministrationOthers from "../../../data_representation/resume_cards/cardAdministrationOthers";
 
 let dataChangedListener;
 

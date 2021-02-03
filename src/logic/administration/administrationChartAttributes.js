@@ -18,7 +18,24 @@ let dataToReturn = {
     genderRepartition: [],
     genderRepartitionPercentage: [],
     dosageRepartition: [],
-    dosageRepartitionPercentage: []
+    dosageRepartitionPercentage: [],
+    categories: {
+        healthcare_personnel: 0,
+        healthcare_variation: 0,
+        healthcare_variation_percentage: 0,
+        associated: 0,
+        associated_variation: 0,
+        associated_variation_percentage: 0,
+        rsa: 0,
+        rsa_variation: 0,
+        rsa_variation_percentage: 0,
+        over80: 0,
+        over80_variation: 0,
+        over80_variation_percentage: 0,
+        others: 0,
+        others_variation: 0,
+        others_variation_percentage: 0,
+    }
 };
 
 export function cleanData() {
@@ -76,6 +93,29 @@ function populateDosageRepartition(){
     }
 }
 
+function populateCategories(){
+    let dataset = Records.getRecords().administration.regions[SelectedLocation.getLocation()];
+    let last_index = dataset.administration_categories_cumulative.healthcare_personnel.length - 1;
+    // total
+    dataToReturn.categories.healthcare_personnel = dataset.administration_categories_cumulative.healthcare_personnel[last_index];
+    dataToReturn.categories.associated = dataset.administration_categories_cumulative.associated_healthcare_personnel[last_index];
+    dataToReturn.categories.rsa = dataset.administration_categories_cumulative.rsa_patients[last_index];
+    dataToReturn.categories.over80 = dataset.administration_categories_cumulative.over_80[last_index];
+    dataToReturn.categories.others = dataset.administration_categories_cumulative.other[last_index];
+    // variation
+    dataToReturn.categories.healthcare_variation = dataset.administration_categories_cumulative.healthcare_personnel[last_index] - dataset.administration_categories_cumulative.healthcare_personnel[last_index - 1];
+    dataToReturn.categories.associated_variation = dataset.administration_categories_cumulative.associated_healthcare_personnel[last_index] - dataset.administration_categories_cumulative.associated_healthcare_personnel[last_index - 1];
+    dataToReturn.categories.rsa_variation = dataset.administration_categories_cumulative.rsa_patients[last_index] - dataset.administration_categories_cumulative.rsa_patients[last_index - 1];
+    dataToReturn.categories.over80_variation = dataset.administration_categories_cumulative.over_80[last_index] - dataset.administration_categories_cumulative.over_80[last_index - 1];
+    dataToReturn.categories.others_variation = dataset.administration_categories_cumulative.other[last_index] - dataset.administration_categories_cumulative.other[last_index - 1];
+    // variation percentage
+    dataToReturn.categories.healthcare_variation_percentage = dataToReturn.categories.healthcare_variation === 0 ? 0 : (Math.round(dataToReturn.categories.healthcare_variation / dataToReturn.categories.healthcare_personnel * 1000) / 100).toFixed(2);
+    dataToReturn.categories.associated_variation_percentage = dataToReturn.categories.associated_variation === 0 ? 0 : (Math.round(dataToReturn.categories.associated_variation / dataToReturn.categories.associated * 1000) / 100).toFixed(2);
+    dataToReturn.categories.rsa_variation_percentage = dataToReturn.categories.rsa_variation === 0 ? 0 : (Math.round(dataToReturn.categories.rsa_variation / dataToReturn.categories.rsa * 1000) / 100).toFixed(2);
+    dataToReturn.categories.over80_variation_percentage = dataToReturn.categories.over80_variation === 0 ? 0 : (Math.round(dataToReturn.categories.over80_variation / dataToReturn.categories.over80 * 1000) / 100).toFixed(2);
+    dataToReturn.categories.others_variation_percentage = dataToReturn.categories.others_variation === 0 ? 0 : (Math.round(dataToReturn.categories.others_variation / dataToReturn.categories.others * 1000) / 100).toFixed(2);
+}
+
 const AdministrationChartAttributes = () => {
     dataToReturn.total = Records.getRecords().administration.regions[SelectedLocation.getLocation()]
         .administration_cumulative[Records.getRecords().administration.regions[SelectedLocation.getLocation()]
@@ -94,6 +134,7 @@ const AdministrationChartAttributes = () => {
     dataToReturn.variationTrend = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_variation;
     populateGenderRepartition();
     populateDosageRepartition();
+    populateCategories();
     return dataToReturn;
 };
 

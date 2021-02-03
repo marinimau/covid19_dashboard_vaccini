@@ -9,6 +9,7 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../ui/theme/style";
 import {cardTitles} from "../../ui/contents/strings";
+import AdministrationChartAttributes from "../../logic/administration/administrationChartAttributes";
 
 export default class CardAdministrationOthers extends Component{
 
@@ -16,8 +17,8 @@ export default class CardAdministrationOthers extends Component{
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                 <Text style={[styles.chartTitle]}>{cardTitles.administrationOther}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{0} ({0}%)</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>+{0} (+{0}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.others.toLocaleString('it')} ({0}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>+{AdministrationChartAttributes().categories.others_variation.toLocaleString('it')} (+{AdministrationChartAttributes().categories.others.toLocaleString('it')}%)</Text>
             </View>
         );
     }
