@@ -8,14 +8,6 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 
 [https://marinimau.github.io/covid19_dashboard_vaccini/](https://marinimau.github.io/covid19_dashboard_vaccini/)
 
-## Screenshot
-
-![light/dark swap screen](./screenshot/2.png)
-
-## Video (PWA on iPad 2019, Safari, iOS 14 and dark mode)
-
-[https://youtu.be/71gJnXslZbk](https://youtu.be/71gJnXslZbk)
-
 ## Features
 
 * Show trend (with different intervals)

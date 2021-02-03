@@ -10,14 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="implementazione completata">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOthers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOthers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
-    </list>
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="implementazione completata" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,14 +104,7 @@
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
-      <workItem from="1612340825853" duration="19027000" />
-    </task>
-    <task id="LOCAL-00006" summary="aggiunto il loader">
-      <created>1595148795949</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1595148795949</updated>
+      <workItem from="1612340825853" duration="19089000" />
     </task>
     <task id="LOCAL-00007" summary="iniziato a organizzare i grafici">
       <created>1595152526190</created>
@@ -456,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612366294167</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="implementazione completata">
+      <created>1612367098804</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1612367098804</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,12 +500,12 @@
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612347558996" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612366295297">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612367100262">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612366295297" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612367100262" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
