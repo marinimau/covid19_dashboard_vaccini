@@ -21,18 +21,23 @@ let dataToReturn = {
     dosageRepartitionPercentage: [],
     categories: {
         healthcare_personnel: 0,
+        healthcare_percentage: 0,
         healthcare_variation: 0,
         healthcare_variation_percentage: 0,
         associated: 0,
+        associated_percentage: 0,
         associated_variation: 0,
         associated_variation_percentage: 0,
         rsa: 0,
+        rsa_percentage: 0,
         rsa_variation: 0,
         rsa_variation_percentage: 0,
         over80: 0,
+        over80_percentage: 0,
         over80_variation: 0,
         over80_variation_percentage: 0,
         others: 0,
+        others_percentage: 0,
         others_variation: 0,
         others_variation_percentage: 0,
     }
@@ -102,6 +107,12 @@ function populateCategories(){
     dataToReturn.categories.rsa = dataset.administration_categories_cumulative.rsa_patients[last_index];
     dataToReturn.categories.over80 = dataset.administration_categories_cumulative.over_80[last_index];
     dataToReturn.categories.others = dataset.administration_categories_cumulative.other[last_index];
+    //percentage
+    dataToReturn.categories.healthcare_percentage = (Math.round(dataToReturn.categories.healthcare_personnel / dataToReturn.total * 10000) / 100).toFixed(2);
+    dataToReturn.categories.associated_percentage = (Math.round(dataToReturn.categories.associated / dataToReturn.total * 10000) / 100).toFixed(2);
+    dataToReturn.categories.rsa_percentage = (Math.round(dataToReturn.categories.rsa / dataToReturn.total * 10000) / 100).toFixed(2);
+    dataToReturn.categories.over80_percentage = (Math.round(dataToReturn.categories.over80 / dataToReturn.total * 10000) / 100).toFixed(2);
+    dataToReturn.categories.others_percentage = (Math.round(dataToReturn.categories.others / dataToReturn.total * 10000) / 100).toFixed(2);
     // variation
     dataToReturn.categories.healthcare_variation = dataset.administration_categories_cumulative.healthcare_personnel[last_index] - dataset.administration_categories_cumulative.healthcare_personnel[last_index - 1];
     dataToReturn.categories.associated_variation = dataset.administration_categories_cumulative.associated_healthcare_personnel[last_index] - dataset.administration_categories_cumulative.associated_healthcare_personnel[last_index - 1];
@@ -109,11 +120,11 @@ function populateCategories(){
     dataToReturn.categories.over80_variation = dataset.administration_categories_cumulative.over_80[last_index] - dataset.administration_categories_cumulative.over_80[last_index - 1];
     dataToReturn.categories.others_variation = dataset.administration_categories_cumulative.other[last_index] - dataset.administration_categories_cumulative.other[last_index - 1];
     // variation percentage
-    dataToReturn.categories.healthcare_variation_percentage = dataToReturn.categories.healthcare_variation === 0 ? 0 : (Math.round(dataToReturn.categories.healthcare_variation / dataToReturn.categories.healthcare_personnel * 1000) / 100).toFixed(2);
-    dataToReturn.categories.associated_variation_percentage = dataToReturn.categories.associated_variation === 0 ? 0 : (Math.round(dataToReturn.categories.associated_variation / dataToReturn.categories.associated * 1000) / 100).toFixed(2);
-    dataToReturn.categories.rsa_variation_percentage = dataToReturn.categories.rsa_variation === 0 ? 0 : (Math.round(dataToReturn.categories.rsa_variation / dataToReturn.categories.rsa * 1000) / 100).toFixed(2);
-    dataToReturn.categories.over80_variation_percentage = dataToReturn.categories.over80_variation === 0 ? 0 : (Math.round(dataToReturn.categories.over80_variation / dataToReturn.categories.over80 * 1000) / 100).toFixed(2);
-    dataToReturn.categories.others_variation_percentage = dataToReturn.categories.others_variation === 0 ? 0 : (Math.round(dataToReturn.categories.others_variation / dataToReturn.categories.others * 1000) / 100).toFixed(2);
+    dataToReturn.categories.healthcare_variation_percentage = dataToReturn.categories.healthcare_variation === 0 ? 0 : (Math.round(dataToReturn.categories.healthcare_variation / dataToReturn.categories.healthcare_personnel * 10000) / 100).toFixed(2);
+    dataToReturn.categories.associated_variation_percentage = dataToReturn.categories.associated_variation === 0 ? 0 : (Math.round(dataToReturn.categories.associated_variation / dataToReturn.categories.associated * 10000) / 100).toFixed(2);
+    dataToReturn.categories.rsa_variation_percentage = dataToReturn.categories.rsa_variation === 0 ? 0 : (Math.round(dataToReturn.categories.rsa_variation / dataToReturn.categories.rsa * 10000) / 100).toFixed(2);
+    dataToReturn.categories.over80_variation_percentage = dataToReturn.categories.over80_variation === 0 ? 0 : (Math.round(dataToReturn.categories.over80_variation / dataToReturn.categories.over80 * 10000) / 100).toFixed(2);
+    dataToReturn.categories.others_variation_percentage = dataToReturn.categories.others_variation === 0 ? 0 : (Math.round(dataToReturn.categories.others_variation / dataToReturn.categories.others * 10000) / 100).toFixed(2);
 }
 
 const AdministrationChartAttributes = () => {

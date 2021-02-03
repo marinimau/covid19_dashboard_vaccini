@@ -14,6 +14,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationAssociated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationAssociated.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationHealtcare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationHealtcare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOthers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOthers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" afterDir="false" />
     </list>
@@ -110,14 +112,7 @@
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
-      <workItem from="1612340825853" duration="16043000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1595078622516</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1595078622516</updated>
+      <workItem from="1612340825853" duration="16962000" />
     </task>
     <task id="LOCAL-00002" summary="header in home">
       <created>1595082159705</created>
@@ -455,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612355252926</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="quasi finito di creare i grafici">
+      <created>1612362752404</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1612362752404</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,12 +508,12 @@
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612347558996" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612355255394">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612362753597">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612355255394" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612362753597" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>

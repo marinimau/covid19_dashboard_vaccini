@@ -17,7 +17,7 @@ export default class CardAdministrationHealtcare extends Component{
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                 <Text style={[styles.chartTitle]}>{cardTitles.administrationHealthcare}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.healthcare_personnel.toLocaleString('it')} ({0}%)</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{AdministrationChartAttributes().categories.healthcare_personnel.toLocaleString('it')} ({AdministrationChartAttributes().categories.healthcare_percentage.toLocaleString('it')}%)</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>+{AdministrationChartAttributes().categories.healthcare_variation.toLocaleString('it')} (+{AdministrationChartAttributes().categories.healthcare_variation_percentage.toLocaleString('it')}%)</Text>
             </View>
         );
