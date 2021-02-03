@@ -6,7 +6,7 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 
 ## PWA url
 
-[https://marinimau.github.io/covid19_dashboard/](https://marinimau.github.io/covid19_dashboard/)
+[https://marinimau.github.io/covid19_dashboard_vaccini/](https://marinimau.github.io/covid19_dashboard_vaccini/)
 
 ## Screenshot
 

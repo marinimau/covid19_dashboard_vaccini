@@ -10,14 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="quasi finito di creare i grafici">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="implementazione completata">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationAssociated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationAssociated.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationHealtcare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationHealtcare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOthers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOthers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationOver80.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationRsa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,14 +108,7 @@
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
-      <workItem from="1612340825853" duration="16962000" />
-    </task>
-    <task id="LOCAL-00002" summary="header in home">
-      <created>1595082159705</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1595082159705</updated>
+      <workItem from="1612340825853" duration="17711000" />
     </task>
     <task id="LOCAL-00003" summary="screens sistemati, header e menu funzionante in tutti">
       <created>1595083956352</created>
@@ -457,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612362752404</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="implementazione completata">
+      <created>1612363709341</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1612363709341</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +472,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
     <MESSAGE value="risolti alcuni problemi nella UI" />
     <MESSAGE value="aggiunta pagina menu" />
@@ -501,19 +496,20 @@
     <MESSAGE value="risolto un bug nei dati" />
     <MESSAGE value="inziato a plottare i dati sulle somministrazioni" />
     <MESSAGE value="quasi finito di creare i grafici" />
-    <option name="LAST_COMMIT_MESSAGE" value="quasi finito di creare i grafici" />
+    <MESSAGE value="implementazione completata" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementazione completata" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612347558996">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612347558996" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612362753597">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612363710644">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612362753597" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612363710644" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
