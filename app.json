@@ -19,14 +19,14 @@
     ],
     "ios": {
       "icon": "./assets/icon_ios.png",
-      "bundleIdentifier": "com.marinimau.covidashboard"
+      "bundleIdentifier": "com.marinimau.covidashboard.vaccini"
     },
     "web": {
       "favicon": "./assets/icon_android.png"
     },
     "android": {
       "icon": "./assets/icon_android.png",
-      "package": "com.marinimau.covidashboard"
+      "package": "com.marinimau.covidashboard.vaccini"
     }
   }
 }
