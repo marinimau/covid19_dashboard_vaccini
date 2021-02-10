@@ -10,7 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="implementazione completata" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemate in parte le date">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/params.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/params.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,25 +50,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data_representation/resume_cards" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/logic" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/data_representation/resume_cards" />
-      <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
-      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/logic/delivery" />
+      <recent name="$PROJECT_DIR$/src/logic" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/src/logic/region" />
       <recent name="$PROJECT_DIR$/src/logic/general" />
-      <recent name="$PROJECT_DIR$/src/ui/components/header" />
-      <recent name="$PROJECT_DIR$/src/ui/components/loading" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/logic" />
+      <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
+      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -104,7 +111,28 @@
       <workItem from="1611567388924" duration="1459000" />
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
-      <workItem from="1612340825853" duration="19089000" />
+      <workItem from="1612002236589" duration="4193000" />
+    </task>
+    <task id="LOCAL-00004" summary="data retrieving funzionante">
+      <created>1595090447936</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595090447936</updated>
+    </task>
+    <task id="LOCAL-00005" summary="aggiunto il loader">
+      <created>1595090642764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595090642764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="aggiunto il loader">
+      <created>1595148795949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595148795949</updated>
     </task>
     <task id="LOCAL-00007" summary="iniziato a organizzare i grafici">
       <created>1595152526190</created>
@@ -379,81 +407,60 @@
       <option name="project" value="LOCAL" />
       <updated>1611997869347</updated>
     </task>
-    <task id="LOCAL-00046" summary="modificati 2 grafici">
-      <created>1612265134013</created>
+    <task id="LOCAL-00046" summary="preprocessing finito per i vaccini consegnati">
+      <created>1612124331191</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1612265134013</updated>
+      <updated>1612124331191</updated>
     </task>
-    <task id="LOCAL-00047" summary="risolto un bug nei dati">
-      <created>1612265428296</created>
+    <task id="LOCAL-00047" summary="preprocessing finito per i vaccini consegnati">
+      <created>1612180475158</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1612265428296</updated>
+      <updated>1612180475158</updated>
     </task>
-    <task id="LOCAL-00048" summary="inziato a plottare i dati sulle somministrazioni">
-      <created>1612350713393</created>
+    <task id="LOCAL-00048" summary="preprocessing finito per i vaccini consegnati">
+      <created>1612181488856</created>
       <option name="number" value="00048" />
       <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1612350713393</updated>
+      <updated>1612181488856</updated>
     </task>
-    <task id="LOCAL-00049" summary="quasi finito di creare i grafici">
-      <created>1612355252926</created>
+    <task id="LOCAL-00049" summary="consegne plottate">
+      <created>1612204846003</created>
       <option name="number" value="00049" />
       <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1612355252926</updated>
+      <updated>1612204846003</updated>
     </task>
-    <task id="LOCAL-00050" summary="quasi finito di creare i grafici">
-      <created>1612362752404</created>
+    <task id="LOCAL-00050" summary="consegne plottate">
+      <created>1612206503197</created>
       <option name="number" value="00050" />
       <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
-      <updated>1612362752404</updated>
+      <updated>1612206503199</updated>
     </task>
-    <task id="LOCAL-00051" summary="implementazione completata">
-      <created>1612363709341</created>
+    <task id="LOCAL-00051" summary="sistemate in parte le date">
+      <created>1612209737729</created>
       <option name="number" value="00051" />
       <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1612363709341</updated>
+      <updated>1612209737729</updated>
     </task>
-    <task id="LOCAL-00052" summary="implementazione completata">
-      <created>1612365748386</created>
+    <task id="LOCAL-00052" summary="sistemate in parte le date">
+      <created>1612212282423</created>
       <option name="number" value="00052" />
       <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
-      <updated>1612365748386</updated>
+      <updated>1612212282423</updated>
     </task>
-    <task id="LOCAL-00053" summary="implementazione completata">
-      <created>1612366270311</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1612366270311</updated>
-    </task>
-    <task id="LOCAL-00054" summary="implementazione completata">
-      <created>1612366294167</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1612366294167</updated>
-    </task>
-    <task id="LOCAL-00055" summary="implementazione completata">
-      <created>1612367098804</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1612367098804</updated>
-    </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -468,6 +475,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
     <MESSAGE value="risolti alcuni problemi nella UI" />
     <MESSAGE value="aggiunta pagina menu" />
@@ -489,31 +497,40 @@
     <MESSAGE value="risolto bug cursore sul web" />
     <MESSAGE value="risolto bug cursore con dati mancanti" />
     <MESSAGE value="modificati 2 grafici" />
-    <MESSAGE value="risolto un bug nei dati" />
-    <MESSAGE value="inziato a plottare i dati sulle somministrazioni" />
-    <MESSAGE value="quasi finito di creare i grafici" />
-    <MESSAGE value="implementazione completata" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementazione completata" />
+    <MESSAGE value="preprocessing finito per i vaccini consegnati" />
+    <MESSAGE value="consegne plottate" />
+    <MESSAGE value="sistemate in parte le date" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemate in parte le date" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612347558996">
-      <screen x="0" y="25" width="2560" height="1341" />
+    <state x="479" y="290" key="#Notifications" timestamp="1612181482282">
+      <screen x="59" y="25" width="1381" height="875" />
     </state>
-    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612347558996" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612367100262">
-      <screen x="0" y="25" width="2560" height="1341" />
+    <state x="479" y="290" key="#Notifications/59.25.1381.875@59.25.1381.875" timestamp="1612181482282" />
+    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612979102956">
+      <screen x="0" y="25" width="2560" height="1340" />
+    </state>
+    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1340@0.25.2560.1340" timestamp="1612979102956" />
+    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612001231032" />
+    <state x="367" y="186" key="Vcs.Push.Dialog.v2" timestamp="1612212283904">
+      <screen x="61" y="25" width="1379" height="875" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1612367100262" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611997873540" />
+    <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1612181490322" />
+    <state x="367" y="186" key="Vcs.Push.Dialog.v2/61.25.1379.875@61.25.1379.875" timestamp="1612212283904" />
+    <state x="371" y="186" key="Vcs.Push.Dialog.v2/66.25.1374.875@66.25.1374.875" timestamp="1612204847302" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
-    <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.816@0.25.1440.816" timestamp="1604076747300" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611048636766" />
     <state x="1045" y="588" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1611990989080">
       <screen x="0" y="25" width="2560" height="1341" />
     </state>
     <state x="1045" y="588" key="git4idea.remote.GitConfigureRemotesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1611990989080" />
+    <state x="415" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1612203883256">
+      <screen x="66" y="25" width="1374" height="875" />
+    </state>
+    <state x="415" y="214" width="670" height="676" key="search.everywhere.popup/66.25.1374.875@66.25.1374.875" timestamp="1612203883256" />
   </component>
 </project>

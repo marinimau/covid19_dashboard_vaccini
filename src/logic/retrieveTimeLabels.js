@@ -4,8 +4,8 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
+
 import Records from "./dataset";
-import dateToString from "../utils/dateToString";
 import {lineChartNumLabels} from "../ui/contents/params";
 
 let dataToReturn = {

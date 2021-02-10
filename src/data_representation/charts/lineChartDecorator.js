@@ -9,12 +9,21 @@ import {Circle, Line, Svg, Text as TextSVG} from "react-native-svg";
 import darkMode from "../../ui/theme/darkModeDetector";
 import Colors from "../../ui/theme/colors";
 import React, {Component, Fragment} from "react";
+import {Dimensions} from "react-native";
 
 
 class LineChartDecorator extends Component{
 
     constructor(props) {
         super(props);
+    }
+
+    getXText = (x) => {
+        console.log(Dimensions.get('window').width);
+        if(x > Dimensions.get('window').width - 150){
+            return x - Math.abs(x - (Dimensions.get('window').width - 150))
+        }
+        return x
     }
 
     render() {
@@ -36,7 +45,7 @@ class LineChartDecorator extends Component{
                         stroke={(darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation)}
                         fill={this.props.color}/>
                     <TextSVG
-                        x={this.props.x}
+                        x={this.getXText(this.props.x)}
                         y={10}
                         fill={(darkMode() ? Colors.darkMode_basic : Colors.basic)}
                         fontSize="14"

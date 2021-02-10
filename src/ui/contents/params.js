@@ -14,10 +14,11 @@ import darkMode from "../theme/darkModeDetector";
 export function lineChartNumLabels(range) {
     switch (range) {
         case 7:
+            return (Dimensions.get('window').width <= dimens.verySmallScreen ? 4 : 7)
         case -1:
             return (Dimensions.get('window').width <= dimens.verySmallScreen ? 4 : 7)
         case 30:
-            return 4;
+            return (Dimensions.get('window').width <= dimens.verySmallScreen ? 4 : 10)
     }
 
 }
