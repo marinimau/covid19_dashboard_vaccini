@@ -10,6 +10,7 @@ import darkMode from "../../ui/theme/darkModeDetector";
 import Colors from "../../ui/theme/colors";
 import React, {Component, Fragment} from "react";
 import {Dimensions} from "react-native";
+import {dynamicDimens} from "../../ui/theme/dimens";
 
 
 class LineChartDecorator extends Component{
@@ -20,10 +21,16 @@ class LineChartDecorator extends Component{
 
     getXText = (x) => {
         console.log(Dimensions.get('window').width);
-        if(x > Dimensions.get('window').width - 150){
-            return x - Math.abs(x - (Dimensions.get('window').width - 150))
+        if(x > dynamicDimens.chartFullWidth - 150){
+            return x - 50;
         }
-        return x
+        else {
+            if(x < 100){
+                return x + 50;
+            }
+            return x;
+        }
+
     }
 
     render() {
