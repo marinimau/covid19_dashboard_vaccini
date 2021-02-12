@@ -12,7 +12,7 @@ import MainScrollableContents from "../mainScrollableContainer";
 import CardAdministration from "../../../data_representation/resume_cards/cardAdministration";
 import {
     administrationChartDescriptions,
-    administrationChartTitles, dataDescription, deliveryChartDescriptions,
+    administrationChartTitles, dataDescription, deliveryChartDescriptions, deliveryChartTitles,
 } from "../../contents/strings";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
@@ -25,6 +25,7 @@ import CardAdministrationHealtcare from "../../../data_representation/resume_car
 import CardAdministrationRsa from "../../../data_representation/resume_cards/cardAdministrationRsa";
 import CardAdministrationOver80 from "../../../data_representation/resume_cards/cardAdministrationOver80";
 import CardAdministrationOthers from "../../../data_representation/resume_cards/cardAdministrationOthers";
+import DeliveryAdministrationRatioAttributes from "../../../logic/common/deliveryAdministrationRatio";
 
 let dataChangedListener;
 
@@ -105,6 +106,12 @@ class AdministrationComponent extends Component {
                         <Text style={[styles.chartTitle]}>{administrationChartTitles.percentageOfTotal}</Text>
                         <MyProgressCircle value={this.state.data.percentageOfTotal} color={this.state.color}/>
                         <Text style={styles.chartDescription}>{administrationChartDescriptions.percentageOfTotal}</Text>
+                    </View>
+
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{deliveryChartTitles.deliveredAdministrationRatio}</Text>
+                        <MyProgressCircle value={DeliveryAdministrationRatioAttributes().percentageOfTotal} color={this.state.color}/>
+                        <Text style={styles.chartDescription}>{deliveryChartDescriptions.deliveredAdministrationRatio}</Text>
                     </View>
 
                     <LineChartCard

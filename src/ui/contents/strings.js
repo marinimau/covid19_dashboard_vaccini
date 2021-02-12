@@ -46,7 +46,8 @@ export const deliveryChartTitles = {
     cumulativeTrend: 'Andamento vaccini consegnati (cumulativo)',
     variationTrend: 'Andamento vaccini consegnati (variazione giornaliera)',
     repartitionAbsolute: 'Ripartizione per casa farmaceutica (valore assoluto)',
-    repartitionPercentage: 'Ripartizione per casa farmaceutica (valore percentuale)'
+    repartitionPercentage: 'Ripartizione per casa farmaceutica (valore percentuale)',
+    deliveredAdministrationRatio: 'Rapporto somministrazioni / consegne'
 }
 
 export const deliveryChartDescriptions = {
@@ -55,6 +56,7 @@ export const deliveryChartDescriptions = {
     variationTrend: 'Numero giornaliero di dosi di vaccino consegnate nel corso del tempo',
     repartitionAbsolute: 'ripartizione per casa farmaceutica  delle dosi consegnate (valore assoluto)',
     repartitionPercentage: 'ripartizione per casa farmaceutica delle dosi consegnate(valore percentuale)',
+    deliveredAdministrationRatio: 'Percentuale di dosi somministrate rispetto a quelle ricevute',
     producer: ['Pfizer Inc', 'Altri']
 }
 

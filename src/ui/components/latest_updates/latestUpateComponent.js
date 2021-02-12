@@ -6,13 +6,13 @@
  */
 
 import React, {Component} from 'react';
-import {TouchableOpacity} from "react-native";
+import {Text, TouchableOpacity, View} from "react-native";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardDelivery from "../../../data_representation/resume_cards/cardDelivery";
 import CardAdministration from "../../../data_representation/resume_cards/cardAdministration";
 import {navigate} from "../../../utils/rootNavigationRef";
-import {screenTitles} from "../../contents/strings";
 import CardDate from "../../../data_representation/resume_cards/cardDate";
+import {screenTitles} from "../../contents/strings";
 
 class LatestUpdateComponent extends Component {
 
