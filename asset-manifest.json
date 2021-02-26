@@ -4,8 +4,8 @@
     "app.js.map": "/covid19_dashboard_vaccini/static/js/app.370d99eb.chunk.js.map",
     "runtime~app.js": "/covid19_dashboard_vaccini/static/js/runtime~app.9e91713d.js",
     "runtime~app.js.map": "/covid19_dashboard_vaccini/static/js/runtime~app.9e91713d.js.map",
-    "static/js/2.43fbcfe8.chunk.js": "/covid19_dashboard_vaccini/static/js/2.43fbcfe8.chunk.js",
-    "static/js/2.43fbcfe8.chunk.js.map": "/covid19_dashboard_vaccini/static/js/2.43fbcfe8.chunk.js.map",
+    "static/js/2.3f15092b.chunk.js": "/covid19_dashboard_vaccini/static/js/2.3f15092b.chunk.js",
+    "static/js/2.3f15092b.chunk.js.map": "/covid19_dashboard_vaccini/static/js/2.3f15092b.chunk.js.map",
     "fonts/AntDesign.ttf": "/covid19_dashboard_vaccini/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/covid19_dashboard_vaccini/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/covid19_dashboard_vaccini/./fonts/Feather.ttf",
@@ -24,11 +24,11 @@
     "index.html": "/covid19_dashboard_vaccini/index.html",
     "manifest.json": "/covid19_dashboard_vaccini/manifest.json",
     "serve.json": "/covid19_dashboard_vaccini/serve.json",
-    "static/js/2.43fbcfe8.chunk.js.LICENSE.txt": "/covid19_dashboard_vaccini/static/js/2.43fbcfe8.chunk.js.LICENSE.txt"
+    "static/js/2.3f15092b.chunk.js.LICENSE.txt": "/covid19_dashboard_vaccini/static/js/2.3f15092b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.9e91713d.js",
-    "static/js/2.43fbcfe8.chunk.js",
+    "static/js/2.3f15092b.chunk.js",
     "static/js/app.370d99eb.chunk.js"
   ]
 }
