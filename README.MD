@@ -2,7 +2,7 @@
 
 
 
-A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
+A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 vax distribution and administration in Italy.
 
 ## PWA URL
 
@@ -14,7 +14,7 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 * Full data representation for each region
 * Show notes of the last 24h
 * Dark-mode based on system theme
-* Full responsive webapp
+* Full responsive
 * iOS and Android apps rendered with native optimizations
 
 ## Issues
