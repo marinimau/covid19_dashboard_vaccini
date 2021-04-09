@@ -4,7 +4,7 @@
 
 A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
 
-## PWA url
+## PWA URL
 
 [https://marinimau.github.io/covid19_dashboard_vaccini/](https://marinimau.github.io/covid19_dashboard_vaccini/)
 
