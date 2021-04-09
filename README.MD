@@ -82,7 +82,7 @@ If you have the iOS simulator installed, just click on **'run on iOS simulator'*
 
 Source:
 
-```https://github.com/pcm-dpc/COVID-19```
+```https://github.com/italia/covid19-opendata-vaccini/```
 
 realtime updated.
 
