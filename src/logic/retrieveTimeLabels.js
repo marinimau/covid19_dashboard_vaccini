@@ -23,8 +23,8 @@ const DateLabels = (range) => {
         dataToReturn.dateLabels = [];
         dataToReturn.dateLabelsComplete = [];
 
-        if( dataToReturn){
-            let start = range === -1 || range === undefined ? 1 : dates.length - range;
+        if(dataToReturn){
+            let start = range === -1 || range === undefined ? 0 : dates.length - range;
             let incr = Math.round(((dates.length - start)) / lineChartNumLabels(range));
             for (let i = start; i < dates.length; i+=incr){
                 i = Math.round(i)

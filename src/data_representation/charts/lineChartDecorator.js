@@ -9,7 +9,6 @@ import {Circle, Line, Svg, Text as TextSVG} from "react-native-svg";
 import darkMode from "../../ui/theme/darkModeDetector";
 import Colors from "../../ui/theme/colors";
 import React, {Component, Fragment} from "react";
-import {Dimensions} from "react-native";
 import {dynamicDimens} from "../../ui/theme/dimens";
 
 
@@ -20,7 +19,6 @@ class LineChartDecorator extends Component{
     }
 
     getXText = (x) => {
-        console.log(Dimensions.get('window').width);
         if(x > dynamicDimens.chartFullWidth - 150){
             return x - 50;
         }

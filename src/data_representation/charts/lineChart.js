@@ -59,7 +59,7 @@ export default class MyLineChart extends PureComponent {
                             labels: DateLabels(this.state.filter).dateLabels,
                             datasets: [
                                 {
-                                    data: this.props.data
+                                    data: this.props.data.slice(Math.max(1 , 0))
                                 }
                             ]
                         },
@@ -95,7 +95,6 @@ export default class MyLineChart extends PureComponent {
     }
 
     decorator = () => {
-        console.log('premuto un punto');
         return this.state.visible ?
             <LineChartDecorator color={this.props.color} x={this.state.x} y={this.state.y}
                                 selectedDate={this.state.selectedDate}

@@ -20,7 +20,6 @@ let Records = {
 
     setAdministrationRecords(records){
         this.data.administration = AdministrationPreprocessing(records);
-        console.log(this.data.administration)
     },
 
     setDeliveryRecords(records){
