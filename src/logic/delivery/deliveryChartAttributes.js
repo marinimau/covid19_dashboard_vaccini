@@ -57,7 +57,7 @@ const DeliveryChartAttributes = () => {
         .delivery_variation[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_variation.length - 1];
     dataToReturn.lastVariationPercentage = dataToReturn.lastVariation === 0 ? 0 :
-        (Math.round((dataToReturn.lastVariation / dataToReturn.totalDelivered * 100)*100)/100).toFixed(2);
+        (Math.round((dataToReturn.lastVariation / dataToReturn.total * 100)*100)/100).toFixed(2);
     let percentage = Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative[Records.getRecords().delivery.regions[SelectedLocation.getLocation()]
         .delivery_cumulative.length - 1] / Records.getRecords().delivery.regions[0]
