@@ -57,7 +57,7 @@ export const deliveryChartDescriptions = {
     repartitionAbsolute: 'ripartizione per casa farmaceutica  delle dosi consegnate (valore assoluto)',
     repartitionPercentage: 'ripartizione per casa farmaceutica delle dosi consegnate(valore percentuale)',
     deliveredAdministrationRatio: 'Percentuale di dosi somministrate rispetto a quelle ricevute',
-    producer: ['Pfizer Inc', 'Altri']
+    producer: ['Pfizer', 'Astrazeneca', 'Moderna', 'Johnson & Johnson', 'Sputnik', 'Altri']
 }
 
 

@@ -31,19 +31,28 @@ function populateRepartition(){
     dataToReturn.producerRepartitionPercentage = [];
     let dates = Records.getDates();
     let current =  Records.getRecords().delivery.regions[SelectedLocation.getLocation()].producer_cumulative;
+    let total = dataToReturn.cumulativeTrend;
     for(let i = 0; i <  current.pfizer.length - 1; i++){
         dataToReturn.producerRepartition.push(
             {
                 date: dates[i],
                 pfizer: current.pfizer[i],
+                astrazeneca: current.astrazeneca[i],
+                moderna: current.moderna[i],
+                johnson: current.johnson[i],
+                sputnik: current.sputnik[i],
                 others: current.others[i]
             }
         );
         dataToReturn.producerRepartitionPercentage.push(
             {
                 date: dates[i],
-                pfizer: current.pfizer[i] === 0 ? 0 : current.pfizer[i] / (current.pfizer[i]  + current.others[i]) * 100,
-                others: current.others[i]  === 0 ? 0 : current.others[i] / (current.pfizer[i]  + current.others[i]) * 100,
+                pfizer: current.pfizer[i] === 0 ? 0 : current.pfizer[i] / total[i] * 100,
+                astrazeneca: current.astrazeneca[i] === 0 ? 0 : current.astrazeneca[i] / total[i] * 100,
+                moderna: current.moderna[i] === 0 ? 0 : current.moderna[i] / total[i] * 100,
+                johnson: current.johnson[i] === 0 ? 0 : current.johnson[i] / total[i] * 100,
+                sputnik: current.sputnik[i] === 0 ? 0 : current.sputnik[i] / total[i] * 100,
+                others: current.others[i]  === 0 ? 0 : current.others[i] / total[i] * 100,
             }
         )
     }

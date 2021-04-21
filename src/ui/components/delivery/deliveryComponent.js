@@ -110,16 +110,16 @@ class DeliveryComponent extends Component {
                                     <StackedAreaChart
                                         key={0}
                                         color={LegendColors.indigo}
-                                        colors={[LegendColors.indigo, LegendColors.pink]}
-                                        keyValues={['pfizer', 'others']}
+                                        colors={[LegendColors.green, LegendColors.blue, LegendColors.purple, LegendColors.teal, LegendColors.indigo, LegendColors.pink]}
+                                        keyValues={['pfizer', 'astrazeneca', 'moderna', 'johnson', 'sputnik','others']}
                                         legend={deliveryChartDescriptions.producer}
                                         data={this.state.data.producerRepartitionPercentage}/>
                                     :
                                     <StackedAreaChart
                                         key={1}
                                         color={LegendColors.indigo}
-                                        colors={[LegendColors.indigo, LegendColors.pink]}
-                                        keyValues={['pfizer', 'others']}
+                                        colors={[LegendColors.green, LegendColors.blue, LegendColors.purple, LegendColors.teal, LegendColors.indigo, LegendColors.pink]}
+                                        keyValues={['pfizer', 'astrazeneca', 'moderna', 'johnson', 'sputnik','others']}
                                         legend={deliveryChartDescriptions.producer}
                                         data={this.state.data.producerRepartition}/>
 

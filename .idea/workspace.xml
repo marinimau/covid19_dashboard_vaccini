@@ -10,13 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fix delivery variation percentage bug">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fix date labels bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/generateDateArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/generateDateArray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/delivery/deliveryAttrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryAttrs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/deliveryChartAttributes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/delivery/deliveryComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,14 +117,7 @@
       <workItem from="1614332665460" duration="82000" />
       <workItem from="1617792569445" duration="1233000" />
       <workItem from="1617793862026" duration="1468000" />
-      <workItem from="1618997203636" duration="4801000" />
-    </task>
-    <task id="LOCAL-00009" summary="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
-      <created>1596654268978</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1596654268978</updated>
+      <workItem from="1618997203636" duration="9954000" />
     </task>
     <task id="LOCAL-00010" summary="aggiunte descrizioni dove mancavano">
       <created>1596659072538</created>
@@ -462,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618998035355</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fix date labels bug">
+      <created>1619002039764</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1619002039765</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +481,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="risolti alcuni problemi nella UI" />
     <MESSAGE value="aggiunta pagina menu" />
     <MESSAGE value="aggiunto banner" />
     <MESSAGE value="aggiunte note" />
@@ -506,7 +505,8 @@
     <MESSAGE value="sistemate in parte le date" />
     <MESSAGE value="risolto un problema di una libreria" />
     <MESSAGE value="fix delivery variation percentage bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix delivery variation percentage bug" />
+    <MESSAGE value="fix date labels bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix date labels bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="290" key="#Notifications" timestamp="1612181482282">
@@ -518,10 +518,10 @@
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1340@0.25.2560.1340" timestamp="1617793483473" />
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612001231032" />
-    <state x="568" y="272" key="Vcs.Push.Dialog.v2" timestamp="1618998037225">
+    <state x="568" y="272" key="Vcs.Push.Dialog.v2" timestamp="1619002042926">
       <screen x="0" y="25" width="2560" height="1340" />
     </state>
-    <state x="568" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1340@0.25.2560.1340" timestamp="1618998037225" />
+    <state x="568" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1340@0.25.2560.1340" timestamp="1619002042926" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611997873540" />
     <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1612181490322" />
     <state x="367" y="186" key="Vcs.Push.Dialog.v2/61.25.1379.875@61.25.1379.875" timestamp="1612212283904" />
