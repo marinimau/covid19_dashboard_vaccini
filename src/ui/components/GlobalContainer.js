@@ -31,7 +31,7 @@ const isLargeScreen = dimensions >= dimens.largeScreen;
 
 let colorScheme = Appearance.getColorScheme();
 
-let subscription;
+let subscription, screenChange;
 
 export default class GlobalContainer extends PureComponent {
 
@@ -44,10 +44,14 @@ export default class GlobalContainer extends PureComponent {
         subscription = Appearance.addChangeListener(({ colorScheme }) => {
             Updates.reload();
         });
+        screenChange = Dimensions.addEventListener("change", ({window, screen})=>{
+            Updates.reload();
+        });
     }
 
     componentWillUnmount() {
         subscription.remove();
+        screenChange.remove();
     }
 
     render() {

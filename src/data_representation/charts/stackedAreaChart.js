@@ -166,7 +166,7 @@ class MyStackAreaChart extends React.PureComponent {
                         )}
                         numColumns={1}
                         horizontal={true}
-                        showsHorizontalScrollIndicator={false}
+                        showsHorizontalScrollIndicator={true}
                         keyExtractor={(item, index) => index.toString()}
                     />
                 </View>
