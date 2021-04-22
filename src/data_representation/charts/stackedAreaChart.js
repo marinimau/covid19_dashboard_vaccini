@@ -157,18 +157,11 @@ class MyStackAreaChart extends React.PureComponent {
 
                 {/* Legend */}
                 <View style={styles.legendExternalContainer}>
-                    <FlatList
-                        data={Array.from(Array(this.props.legend.length).keys())}
-                        renderItem={({index}) => (
-                            <ChartColorLegend
-                                title={this.props.legend[index]}
-                                color={colors[index]}/>
-                        )}
-                        numColumns={1}
-                        horizontal={true}
-                        showsHorizontalScrollIndicator={true}
-                        keyExtractor={(item, index) => index.toString()}
-                    />
+                    {this.props.legend.map((name, index) =>
+                        <ChartColorLegend
+                            title={name}
+                            color={colors[index]}/>
+                    )}
                 </View>
 
 
