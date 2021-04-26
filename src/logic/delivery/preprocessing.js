@@ -17,7 +17,7 @@ function evaluateProducer(producer_string){
         return 1;
     if(producer_string.includes('moderna'))
         return 2;
-    if(producer_string.includes('janessen'))
+    if(producer_string.includes('janssen'))
         return 3;
     if(producer_string.includes('sputnik'))
         return 4;
