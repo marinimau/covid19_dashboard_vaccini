@@ -13,8 +13,6 @@
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemate in parte le date">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/delivery/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,13 +108,7 @@
       <workItem from="1611658311227" duration="7077000" />
       <workItem from="1611990883178" duration="7712000" />
       <workItem from="1612002236589" duration="4193000" />
-    </task>
-    <task id="LOCAL-00004" summary="data retrieving funzionante">
-      <created>1595090447936</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1595090447936</updated>
+      <workItem from="1619812180206" duration="561000" />
     </task>
     <task id="LOCAL-00005" summary="aggiunto il loader">
       <created>1595090642764</created>
@@ -454,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612212282423</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="sistemate in parte le date">
+      <created>1619464725244</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1619464725245</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,10 +509,10 @@
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1340@0.25.2560.1340" timestamp="1612979102956" />
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612001231032" />
-    <state x="367" y="186" key="Vcs.Push.Dialog.v2" timestamp="1612212283904">
-      <screen x="61" y="25" width="1379" height="875" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619464727002">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.813@0.25.1440.813" timestamp="1619464727002" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611997873540" />
     <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1612181490322" />
     <state x="367" y="186" key="Vcs.Push.Dialog.v2/61.25.1379.875@61.25.1379.875" timestamp="1612212283904" />
