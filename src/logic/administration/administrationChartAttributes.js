@@ -88,7 +88,8 @@ function populateDosageRepartition() {
     dataToReturn.dosageRepartitionPercentage = [];
     let dates = Records.getDates();
     let current = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_dosage;
-    for (let i = 0; i < current.first.length - 1; i++) {
+    let i = 0
+    for (; i < current.first.length - 1; i++) {
         dataToReturn.dosageRepartition.push(
             {
                 date: dates[i],

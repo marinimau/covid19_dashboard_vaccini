@@ -26,6 +26,8 @@ import CardAdministrationRsa from "../../../data_representation/resume_cards/car
 import CardAdministrationOver80 from "../../../data_representation/resume_cards/cardAdministrationOver80";
 import CardAdministrationOthers from "../../../data_representation/resume_cards/cardAdministrationOthers";
 import DeliveryAdministrationRatioAttributes from "../../../logic/common/deliveryAdministrationRatio";
+import CardAdministrationFirst from "../../../data_representation/resume_cards/cardAdministrationFirst";
+import CardAdministrationSecond from "../../../data_representation/resume_cards/cardAdministrationSecond";
 
 let dataChangedListener;
 
@@ -113,6 +115,10 @@ class AdministrationComponent extends Component {
                         <MyProgressCircle value={DeliveryAdministrationRatioAttributes().percentageOfTotal} color={this.state.color}/>
                         <Text style={styles.chartDescription}>{deliveryChartDescriptions.deliveredAdministrationRatio}</Text>
                     </View>
+
+                    <CardAdministrationFirst />
+
+                    <CardAdministrationSecond />
 
                     <LineChartCard
                         key={this.state.data}
