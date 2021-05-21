@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/covid19_dashboard_vaccini/static/js/app.c553d87a.chunk.js",
-    "app.js.map": "/covid19_dashboard_vaccini/static/js/app.c553d87a.chunk.js.map",
+    "app.js": "/covid19_dashboard_vaccini/static/js/app.3ff283f7.chunk.js",
+    "app.js.map": "/covid19_dashboard_vaccini/static/js/app.3ff283f7.chunk.js.map",
     "runtime~app.js": "/covid19_dashboard_vaccini/static/js/runtime~app.9e91713d.js",
     "runtime~app.js.map": "/covid19_dashboard_vaccini/static/js/runtime~app.9e91713d.js.map",
     "static/js/2.3f15092b.chunk.js": "/covid19_dashboard_vaccini/static/js/2.3f15092b.chunk.js",
@@ -29,6 +29,6 @@
   "entrypoints": [
     "static/js/runtime~app.9e91713d.js",
     "static/js/2.3f15092b.chunk.js",
-    "static/js/app.c553d87a.chunk.js"
+    "static/js/app.3ff283f7.chunk.js"
   ]
 }

@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "e3848f5e6f78ec735647",
-    "url": "/covid19_dashboard_vaccini/static/js/app.c553d87a.chunk.js"
+    "revision": "7dc52b2786eeee1ec542",
+    "url": "/covid19_dashboard_vaccini/static/js/app.3ff283f7.chunk.js"
   },
   {
     "revision": "02440e871933a85c4e9f",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/covid19_dashboard_vaccini/expo-service-worker.js"
   },
   {
-    "revision": "e8d3240929729ca7baf02be36ec0b7cf",
+    "revision": "3dd0529a03b05f244e38540880337542",
     "url": "/covid19_dashboard_vaccini/index.html"
   },
   {
