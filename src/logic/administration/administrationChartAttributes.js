@@ -19,6 +19,14 @@ let dataToReturn = {
     genderRepartitionPercentage: [],
     dosageRepartition: [],
     dosageRepartitionPercentage: [],
+    dosageFirstCumulative: 0,
+    dosageSecondCumulative: 0,
+    dosageFirstPercentage: 0,
+    dosageSecondPercentage: 0,
+    dosageFirstVariation: 0,
+    dosageSecondVariation: 0,
+    dosageFirstVariationPercentage: 0,
+    dosageSecondVariationPercentage: 0,
     categories: {
         healthcare_personnel: 0,
         healthcare_percentage: 0,
@@ -52,12 +60,12 @@ export function cleanData() {
     dataToReturn.dosageRepartitionPercentage = []
 }
 
-function populateGenderRepartition(){
+function populateGenderRepartition() {
     dataToReturn.genderRepartition = [];
     dataToReturn.genderRepartitionPercentage = [];
     let dates = Records.getDates();
-    let current =  Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_gender_cumulative;
-    for(let i = 0; i <  current.male.length - 1; i++){
+    let current = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_gender_cumulative;
+    for (let i = 0; i < current.male.length - 1; i++) {
         dataToReturn.genderRepartition.push(
             {
                 date: dates[i],
@@ -68,19 +76,19 @@ function populateGenderRepartition(){
         dataToReturn.genderRepartitionPercentage.push(
             {
                 date: dates[i],
-                male: current.male[i] === 0 ? 0 : current.male[i] / (current.male[i]  + current.female[i]) * 100,
-                female: current.female[i]  === 0 ? 0 : current.female[i] / (current.male[i]  + current.female[i]) * 100,
+                male: current.male[i] === 0 ? 0 : current.male[i] / (current.male[i] + current.female[i]) * 100,
+                female: current.female[i] === 0 ? 0 : current.female[i] / (current.male[i] + current.female[i]) * 100,
             }
         )
     }
 }
 
-function populateDosageRepartition(){
+function populateDosageRepartition() {
     dataToReturn.dosageRepartition = [];
     dataToReturn.dosageRepartitionPercentage = [];
     let dates = Records.getDates();
-    let current =  Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_dosage;
-    for(let i = 0; i <  current.first.length - 1; i++){
+    let current = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_dosage;
+    for (let i = 0; i < current.first.length - 1; i++) {
         dataToReturn.dosageRepartition.push(
             {
                 date: dates[i],
@@ -91,14 +99,22 @@ function populateDosageRepartition(){
         dataToReturn.dosageRepartitionPercentage.push(
             {
                 date: dates[i],
-                first: current.first[i] === 0 ? 0 : current.first[i] / (current.first[i]  + current.second[i]) * 100,
-                second: current.second[i]  === 0 ? 0 : current.second[i] / (current.first[i]  + current.second[i]) * 100,
+                first: current.first[i] === 0 ? 0 : current.first[i] / (current.first[i] + current.second[i]) * 100,
+                second: current.second[i] === 0 ? 0 : current.second[i] / (current.first[i] + current.second[i]) * 100,
             }
         )
     }
+    dataToReturn.dosageFirstCumulative = current.first[i];
+    dataToReturn.dosageSecondCumulative = current.second[i];
+    dataToReturn.dosageFirstPercentage = dataToReturn.dosageFirstCumulative === 0 ? 0 : dataToReturn.dosageFirstCumulative / dataToReturn.total * 100;
+    dataToReturn.dosageSecondPercentage = dataToReturn.dosageSecondCumulative === 0 ? 0 : dataToReturn.dosageSecondCumulative / dataToReturn.total * 100;
+    dataToReturn.dosageFirstVariation = current.first[i] - current.first[i - 1];
+    dataToReturn.dosageSecondVariation = current.second[i] - current.second[i - 1];
+    dataToReturn.dosageFirstVariationPercentage = dataToReturn.dosageFirstVariation === 0 ? 0 : (dataToReturn.dosageFirstVariation / dataToReturn.dosageFirstCumulative * 100);
+    dataToReturn.dosageSecondVariationPercentage = dataToReturn.dosageSecondVariation === 0 ? 0 : (dataToReturn.dosageSecondVariation / dataToReturn.dosageSecondCumulative * 100);
 }
 
-function populateCategories(){
+function populateCategories() {
     let dataset = Records.getRecords().administration.regions[SelectedLocation.getLocation()];
     let last_index = dataset.administration_categories_cumulative.healthcare_personnel.length - 1;
     // total
@@ -135,12 +151,12 @@ const AdministrationChartAttributes = () => {
         .administration_variation[Records.getRecords().administration.regions[SelectedLocation.getLocation()]
         .administration_variation.length - 1];
     dataToReturn.lastVariationPercentage = dataToReturn.lastVariation === 0 ? 0 :
-        (Math.round((dataToReturn.lastVariation / dataToReturn.total * 100)*100)/100).toFixed(2);
+        (Math.round((dataToReturn.lastVariation / dataToReturn.total * 100) * 100) / 100).toFixed(2);
     let percentage = Records.getRecords().administration.regions[SelectedLocation.getLocation()]
         .administration_cumulative[Records.getRecords().administration.regions[SelectedLocation.getLocation()]
         .administration_cumulative.length - 1] / Records.getRecords().administration.regions[0]
         .administration_cumulative[Records.getRecords().administration.regions[0].administration_cumulative.length - 1] * 100;
-    dataToReturn.percentageOfTotal = (Math.round(percentage*100)/100).toFixed(2);
+    dataToReturn.percentageOfTotal = (Math.round(percentage * 100) / 100).toFixed(2);
     dataToReturn.cumulativeTrend = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_cumulative;
     dataToReturn.variationTrend = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_variation;
     populateGenderRepartition();

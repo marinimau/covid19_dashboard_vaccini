@@ -38,7 +38,9 @@ export const cardTitles = {
     administrationAssociated: 'Personale non sanitario',
     administrationRsa: 'Pazienti delle RSA',
     administrationOver80: 'Cittadini Over80',
-    administrationOther: 'Altri'
+    administrationOther: 'Altri',
+    administrationFirstDosage: 'Prime dosi',
+    administrationSecondDosage: 'Seconde dosi',
 }
 
 export const deliveryChartTitles = {
