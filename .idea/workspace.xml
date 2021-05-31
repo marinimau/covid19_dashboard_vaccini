@@ -10,12 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="solved a bug with screen rotation on ipad">
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="edit all-italy dosage repartition bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/administration/administrationsAttrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationsAttrs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,13 +117,6 @@
       <workItem from="1617793862026" duration="1468000" />
       <workItem from="1618997203636" duration="10813000" />
       <workItem from="1619082455122" duration="1495000" />
-    </task>
-    <task id="LOCAL-00012" summary="finito di aggiungere le tabelle con i dati regionali">
-      <created>1596964018980</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1596964018980</updated>
     </task>
     <task id="LOCAL-00013" summary="finito di aggiungere le tabelle con i dati regionali">
       <created>1597000677551</created>
@@ -462,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619083736697</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="edit all-italy dosage repartition bug">
+      <created>1622461084550</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1622461084550</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +480,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aggiunte note" />
     <MESSAGE value="sistemato text marquee delle note" />
     <MESSAGE value="aggiunti grafici mancanti alla sezione tamponi" />
     <MESSAGE value="risolti alcuni problemi" />
@@ -506,38 +504,21 @@
     <MESSAGE value="fix date labels bug" />
     <MESSAGE value="add new vax producer" />
     <MESSAGE value="solved a bug with screen rotation on ipad" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved a bug with screen rotation on ipad" />
+    <MESSAGE value="edit all-italy dosage repartition bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit all-italy dosage repartition bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="479" y="290" key="#Notifications" timestamp="1612181482282">
-      <screen x="59" y="25" width="1381" height="875" />
-    </state>
-    <state x="479" y="290" key="#Notifications/59.25.1381.875@59.25.1381.875" timestamp="1612181482282" />
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617793483473">
       <screen x="0" y="25" width="2560" height="1340" />
     </state>
     <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1340@0.25.2560.1340" timestamp="1617793483473" />
-    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1612001231032" />
-    <state x="568" y="272" key="Vcs.Push.Dialog.v2" timestamp="1619083762463">
+    <state x="568" y="272" key="Vcs.Push.Dialog.v2" timestamp="1622461086501">
       <screen x="0" y="25" width="2560" height="1340" />
     </state>
-    <state x="568" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1340@0.25.2560.1340" timestamp="1619083762463" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611997873540" />
-    <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1612181490322" />
-    <state x="367" y="186" key="Vcs.Push.Dialog.v2/61.25.1379.875@61.25.1379.875" timestamp="1612212283904" />
-    <state x="371" y="186" key="Vcs.Push.Dialog.v2/66.25.1374.875@66.25.1374.875" timestamp="1612204847302" />
+    <state x="568" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1340@0.25.2560.1340" timestamp="1622461086501" />
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618997419001">
       <screen x="0" y="25" width="2560" height="1340" />
     </state>
     <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1340@0.25.2560.1340" timestamp="1618997419001" />
-    <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611048636766" />
-    <state x="1045" y="588" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1611990989080">
-      <screen x="0" y="25" width="2560" height="1341" />
-    </state>
-    <state x="1045" y="588" key="git4idea.remote.GitConfigureRemotesDialog/0.25.2560.1341@0.25.2560.1341" timestamp="1611990989080" />
-    <state x="415" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1612203883256">
-      <screen x="66" y="25" width="1374" height="875" />
-    </state>
-    <state x="415" y="214" width="670" height="676" key="search.everywhere.popup/66.25.1374.875@66.25.1374.875" timestamp="1612203883256" />
   </component>
 </project>

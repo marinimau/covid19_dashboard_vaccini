@@ -9,21 +9,32 @@ import AdministrationData from "./administrationData";
 import AdministrationsAttrs from "./administrationsAttrs";
 import divideByRegion from "../common/preprocessing";
 
-function organizeByDate(data){
+function organizeByDate(data) {
     let dataset = new AdministrationData();
     let ita = new AdministrationsAttrs();
     ita.setRegion("ITA");
     dataset.pushToRegion(ita);
     // for each region
-    for(let r = 0; r < data.length; r ++) {
+    for (let r = 0; r < data.length; r++) {
         let current_region = new AdministrationsAttrs();
         let index = 0;
         //for each day from day 0 to today
-        for(let i = 0; i < daysFromDay0(); i++) {
+        for (let i = 0; i < daysFromDay0(); i++) {
             let tmp_gender = {male: 0, female: 0}, tmp_dosage = {first: 0, second: 0},
-                tmp_categories = {healthcare: 0, associated_healthcare: 0, rsa: 0, over80: 0, others: 0};
+                tmp_categories = {healthcare: 0, associated_healthcare: 0, rsa: 0, over80: 0, others: 0}, tmp_age = {
+                    over_90: 0,
+                    f80_89: 0,
+                    f70_79: 0,
+                    f60_69: 0,
+                    f50_59: 0,
+                    f40_49: 0,
+                    f30_39: 0,
+                    f20_29: 0,
+                    f16_19: 0,
+                    under16: 0
+                };
             //while date equals to today
-            while(index < data[r].length && compareDateUsingDaysFromDay0(i, data[r][index]["data_somministrazione"])) {
+            while (index < data[r].length && compareDateUsingDaysFromDay0(i, data[r][index]["data_somministrazione"])) {
                 //gender
                 tmp_gender.male += data[r][index]["sesso_maschile"];
                 tmp_gender.female += data[r][index]["sesso_femminile"];
@@ -35,6 +46,38 @@ function organizeByDate(data){
                 tmp_categories.associated_healthcare += data[r][index]["categoria_personale_non_sanitario"];
                 tmp_categories.rsa += data[r][index]["categoria_ospiti_rsa"];
                 tmp_categories.over80 += data[r][index]["categoria_over80"];
+                //age
+                switch (data[r][index]["fascia_anagrafica"]) {
+                    case '90+':
+                        tmp_age.over_90 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '80-89':
+                        tmp_age.f80_89 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '70-79':
+                        tmp_age.f70_79 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '60-69':
+                        tmp_age.f60_69 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '50-59':
+                        tmp_age.f50_59 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '40-49':
+                        tmp_age.f40_49 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '30-39':
+                        tmp_age.f30_39 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '20-29':
+                        tmp_age.f20_29 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    case '16-19':
+                        tmp_age.f16_19 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                        break;
+                    default:
+                        tmp_age.under16 += (data[r][index]["prima_dose"] + data[r][index]["prima_dose"]);
+                }
                 //update index
                 index++;
             }
@@ -44,6 +87,7 @@ function organizeByDate(data){
             current_region.addGenderCumulative(tmp_gender.male, tmp_gender.female);
             current_region.addDosageCumulative(tmp_dosage.first, tmp_dosage.second);
             current_region.addCategoriesCumulative(tmp_categories.healthcare, tmp_categories.associated_healthcare, tmp_categories.rsa, tmp_categories.over80, tmp_categories.others);
+            current_region.addAgeRepartitionCumulative(tmp_age.over_90, tmp_age.f80_89, tmp_age.f70_79, tmp_age.f60_69, tmp_age.f50_59, tmp_age.f40_49, tmp_age.f30_39, tmp_age.f20_29, tmp_age.f16_19, tmp_age.under16);
         }
         dataset.pushToRegion(current_region)
     }
@@ -51,11 +95,11 @@ function organizeByDate(data){
 }
 
 
-function createAllItalyResume(data){
-    for(let i = 1; i < data.regions[1].administration_cumulative.length; i++){
+function createAllItalyResume(data) {
+    for (let i = 1; i < data.regions[1].administration_cumulative.length; i++) {
         let cumulative = 0, variation = 0, gender = {male: 0, female: 0}, dosage = {first: 0, second: 0},
             categories = {healthcare: 0, associated_healthcare: 0, rsa: 0, over80: 0, others: 0};
-        for(let j = 1; j < data.regions.length; j++){
+        for (let j = 1; j < data.regions.length; j++) {
             cumulative += data.regions[j].administration_cumulative[i];
             variation += data.regions[j].administration_variation[i];
             // gender
@@ -89,6 +133,6 @@ function createAllItalyResume(data){
     return data
 }
 
-export default function AdministrationPreprocessing(data){
+export default function AdministrationPreprocessing(data) {
     return createAllItalyResume(organizeByDate(divideByRegion(data)));
 }

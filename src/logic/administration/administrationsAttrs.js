@@ -18,11 +18,23 @@ export default class AdministrationsAttrs {
         second: [0]
     }
     administration_categories_cumulative = {
-        healthcare_personnel : [0],
-        associated_healthcare_personnel : [0],
+        healthcare_personnel: [0],
+        associated_healthcare_personnel: [0],
         rsa_patients: [0],
         over_80: [0],
         other: [0],
+    }
+    administration_age_cumulative = {
+        over_90: [0],
+        f80_89: [0],
+        f70_79: [0],
+        f60_69: [0],
+        f50_59: [0],
+        f40_49: [0],
+        f30_39: [0],
+        f20_29: [0],
+        f16_19: [0],
+        under16: [0]
     }
 
     setRegion = (region) => {
@@ -37,12 +49,12 @@ export default class AdministrationsAttrs {
         this.administration_variation.push(item);
     }
 
-    addGenderCumulative = (male, female) =>{
+    addGenderCumulative = (male, female) => {
         this.administration_gender_cumulative.male.push(this.administration_gender_cumulative.male[this.administration_gender_cumulative.male.length - 1] + male);
         this.administration_gender_cumulative.female.push(this.administration_gender_cumulative.female[this.administration_gender_cumulative.female.length - 1] + female);
     }
 
-    addDosageCumulative = (first, second) =>{
+    addDosageCumulative = (first, second) => {
         this.administration_dosage.first.push(this.administration_dosage.first[this.administration_dosage.first.length - 1] + first);
         this.administration_dosage.second.push(this.administration_dosage.second[this.administration_dosage.second.length - 1] + second);
     }
@@ -53,6 +65,20 @@ export default class AdministrationsAttrs {
         this.administration_categories_cumulative.rsa_patients.push(this.administration_categories_cumulative.rsa_patients[this.administration_categories_cumulative.rsa_patients.length - 1] + rsa_patients);
         this.administration_categories_cumulative.over_80.push(this.administration_categories_cumulative.over_80[this.administration_categories_cumulative.over_80.length - 1] + over_80);
         this.administration_categories_cumulative.other.push(this.administration_categories_cumulative.other[this.administration_categories_cumulative.other.length - 1] + other);
+    }
+
+    addAgeRepartitionCumulative = (over90, f80_89, f70_79, f60_69, f50_59, f40_49, f30_39, f20_29, f16_19, under16) => {
+        let idx = this.administration_age_cumulative.under16.length -1
+        this.administration_age_cumulative.under16.push(this.administration_age_cumulative.under16[idx] + under16);
+        this.administration_age_cumulative.f16_19.push(this.administration_age_cumulative.under16[idx] + f16_19);
+        this.administration_age_cumulative.f20_29.push(this.administration_age_cumulative.under16[idx] + f20_29);
+        this.administration_age_cumulative.f30_39.push(this.administration_age_cumulative.under16[idx] + f30_39);
+        this.administration_age_cumulative.f40_49.push(this.administration_age_cumulative.under16[idx] + f40_49);
+        this.administration_age_cumulative.f50_59.push(this.administration_age_cumulative.under16[idx] + f50_59);
+        this.administration_age_cumulative.f60_69.push(this.administration_age_cumulative.under16[idx] + f60_69);
+        this.administration_age_cumulative.f70_79.push(this.administration_age_cumulative.under16[idx] + f70_79);
+        this.administration_age_cumulative.f80_89.push(this.administration_age_cumulative.under16[idx] + f80_89);
+        this.administration_age_cumulative.over_90.push(this.administration_age_cumulative.under16[idx] + over90);
     }
 
     clear = () => {
@@ -68,5 +94,15 @@ export default class AdministrationsAttrs {
         this.administration_categories_cumulative.rsa_patients = [0];
         this.administration_categories_cumulative.over_80 = [0];
         this.administration_categories_cumulative.other = [0];
+        this.administration_age_cumulative.under16 = [0];
+        this.administration_age_cumulative.f16_19 = [0];
+        this.administration_age_cumulative.f20_29 = [0];
+        this.administration_age_cumulative.f30_39 = [0];
+        this.administration_age_cumulative.f40_49 = [0];
+        this.administration_age_cumulative.f50_59 = [0];
+        this.administration_age_cumulative.f60_69 = [0];
+        this.administration_age_cumulative.f70_79 = [0];
+        this.administration_age_cumulative.f80_89 = [0];
+        this.administration_age_cumulative.over_90 = [0];
     }
 }

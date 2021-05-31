@@ -134,6 +134,8 @@ class AdministrationComponent extends Component {
                         data={this.state.data.variationTrend}
                         description={administrationChartDescriptions.variationTrend}/>
 
+                    {/*
+
                     <CardAdministrationHealtcare />
 
                     <CardAdministrationAssociated />
@@ -143,6 +145,8 @@ class AdministrationComponent extends Component {
                     <CardAdministrationOver80 />
 
                     <CardAdministrationOthers />
+
+                    */}
 
                     <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                         <Text style={styles.chartTitle}>{this.state.genderRepartitionTitle}</Text>
