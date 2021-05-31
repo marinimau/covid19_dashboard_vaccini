@@ -48,6 +48,47 @@ let dataToReturn = {
         others_percentage: 0,
         others_variation: 0,
         others_variation_percentage: 0,
+    },
+    age : {
+        over_90: 0,
+        f80_89: 0,
+        f70_79: 0,
+        f60_69: 0,
+        f50_59: 0,
+        f40_49: 0,
+        f30_39: 0,
+        f20_29: 0,
+        f16_19: 0,
+        under16: 0,
+        over_90_percentage: 0,
+        f80_89_percentage: 0,
+        f70_79_percentage: 0,
+        f60_69_percentage: 0,
+        f50_59_percentage: 0,
+        f40_49_percentage: 0,
+        f30_39_percentage: 0,
+        f20_29_percentage: 0,
+        f16_19_percentage: 0,
+        under16_percentage: 0,
+        over_90_variation: 0,
+        f80_89_variation: 0,
+        f70_79_variation: 0,
+        f60_69_variation: 0,
+        f50_59_variation: 0,
+        f40_49_variation: 0,
+        f30_39_variation: 0,
+        f20_29_variation: 0,
+        f16_19_variation: 0,
+        under16_variation: 0,
+        over_90_variation_percentage: 0,
+        f80_89_variation_percentage: 0,
+        f70_79_variation_percentage: 0,
+        f60_69_variation_percentage: 0,
+        f50_59_variation_percentage: 0,
+        f40_49_variation_percentage: 0,
+        f30_39_variation_percentage: 0,
+        f20_29_variation_percentage: 0,
+        f16_19_variation_percentage: 0,
     }
 };
 
@@ -144,6 +185,51 @@ function populateCategories() {
     dataToReturn.categories.others_variation_percentage = dataToReturn.categories.others_variation === 0 ? 0 : (Math.round(dataToReturn.categories.others_variation / dataToReturn.categories.others * 10000) / 100).toFixed(2);
 }
 
+function populateAges(){
+    let dataset = Records.getRecords().administration.regions[SelectedLocation.getLocation()].administration_age_cumulative;
+    let last_index = dataset.administration_age_cumulative.f80_89.length - 1;
+    dataToReturn.age.over_90 = dataset.over_90[last_index];
+    dataToReturn.age.f80_89 = dataset.f80_89[last_index];
+    dataToReturn.age.f70_79 = dataset.f70_79[last_index];
+    dataToReturn.age.f60_69 = dataset.f60_69[last_index];
+    dataToReturn.age.f50_59 = dataset.f50_59[last_index];
+    dataToReturn.age.f40_49 = dataset.f40_49[last_index];
+    dataToReturn.age.f30_39 = dataset.f30_39[last_index];
+    dataToReturn.age.f20_29 = dataset.f20_29[last_index];
+    dataToReturn.age.f16_19 = dataset.f16_19[last_index];
+    dataToReturn.age.under16 = dataset.under16[last_index];
+    dataToReturn.age.over_90_percentage = 0;
+    dataToReturn.age.f80_89_percentage = 0;
+    dataToReturn.age.f70_79_percentage = 0;
+    dataToReturn.age.f60_69_percentage = 0;
+    dataToReturn.age.f50_59_percentage = 0;
+    dataToReturn.age.f40_49_percentage = 0;
+    dataToReturn.age.f30_39_percentage = 0;
+    dataToReturn.age.f20_29_percentage = 0;
+    dataToReturn.age.f16_19_percentage = 0;
+    dataToReturn.age.under16_percentage = 0;
+    dataToReturn.age.over_90_variation = 0;
+    dataToReturn.age.f80_89_variation = 0;
+    dataToReturn.age.f70_79_variation = 0;
+    dataToReturn.age.f60_69_variation = 0;
+    dataToReturn.age.f50_59_variation = 0;
+    dataToReturn.age.f40_49_variation = 0;
+    dataToReturn.age.f30_39_variation = 0;
+    dataToReturn.age.f20_29_variation = 0;
+    dataToReturn.age.f16_19_variation = 0;
+    dataToReturn.age.under16_variation = 0;
+    dataToReturn.age.over_90_variation_percentage = 0;
+    dataToReturn.age.f80_89_variation_percentage = 0;
+    dataToReturn.age.f70_79_variation_percentage = 0;
+    dataToReturn.age.f60_69_variation_percentage = 0;
+    dataToReturn.age.f50_59_variation_percentage = 0;
+    dataToReturn.age.f40_49_variation_percentage = 0;
+    dataToReturn.age.f30_39_variation_percentage = 0;
+    dataToReturn.age.f20_29_variation_percentage = 0;
+    dataToReturn.age.f16_19_variation_percentage = 0;
+    
+}
+
 const AdministrationChartAttributes = () => {
     dataToReturn.total = Records.getRecords().administration.regions[SelectedLocation.getLocation()]
         .administration_cumulative[Records.getRecords().administration.regions[SelectedLocation.getLocation()]
@@ -163,6 +249,7 @@ const AdministrationChartAttributes = () => {
     populateGenderRepartition();
     populateDosageRepartition();
     populateCategories();
+    populateAges();
     return dataToReturn;
 };
 
