@@ -61,6 +61,8 @@ export default class AdministrationsAttrs {
         this.administration_variation = [0];
         this.administration_gender_cumulative.male = [0];
         this.administration_gender_cumulative.female = [0];
+        this.administration_dosage.first = [0];
+        this.administration_dosage.second = [0];
         this.administration_categories_cumulative.healthcare_personnel = [0];
         this.administration_categories_cumulative.associated_healthcare_personnel = [0];
         this.administration_categories_cumulative.rsa_patients = [0];

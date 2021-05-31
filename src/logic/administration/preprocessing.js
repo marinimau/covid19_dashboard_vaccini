@@ -62,8 +62,8 @@ function createAllItalyResume(data){
             gender.male += data.regions[j].administration_gender_cumulative.male[i];
             gender.female += data.regions[j].administration_gender_cumulative.female[i];
             // dosage
-            dosage.first = data.regions[j].administration_dosage.first[i];
-            dosage.second = data.regions[j].administration_dosage.second[i];
+            dosage.first += data.regions[j].administration_dosage.first[i];
+            dosage.second += data.regions[j].administration_dosage.second[i];
             // categories
             categories.healthcare += data.regions[j].administration_categories_cumulative.healthcare_personnel[i];
             categories.associated_healthcare += data.regions[j].administration_categories_cumulative.associated_healthcare_personnel[i];
