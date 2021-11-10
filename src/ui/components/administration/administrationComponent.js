@@ -28,6 +28,8 @@ import CardAdministrationOthers from "../../../data_representation/resume_cards/
 import DeliveryAdministrationRatioAttributes from "../../../logic/common/deliveryAdministrationRatio";
 import CardAdministrationFirst from "../../../data_representation/resume_cards/cardAdministrationFirst";
 import CardAdministrationSecond from "../../../data_representation/resume_cards/cardAdministrationSecond";
+import CardAdministrationThird from "../../../data_representation/resume_cards/cardAdministrationThird";
+import CardAdministrationBooster from "../../../data_representation/resume_cards/cardAdministrationBooster";
 
 let dataChangedListener;
 
@@ -117,8 +119,9 @@ class AdministrationComponent extends Component {
                     </View>
 
                     <CardAdministrationFirst />
-
                     <CardAdministrationSecond />
+                    <CardAdministrationThird />
+                    <CardAdministrationBooster />
 
                     <LineChartCard
                         key={this.state.data}

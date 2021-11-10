@@ -15,7 +15,9 @@ export default class AdministrationsAttrs {
     }
     administration_dosage = {
         first: [0],
-        second: [0]
+        second: [0],
+        third: [0],
+        booster: [0]
     }
     administration_categories_cumulative = {
         healthcare_personnel: [0],
@@ -54,9 +56,11 @@ export default class AdministrationsAttrs {
         this.administration_gender_cumulative.female.push(this.administration_gender_cumulative.female[this.administration_gender_cumulative.female.length - 1] + female);
     }
 
-    addDosageCumulative = (first, second) => {
+    addDosageCumulative = (first, second, third, booster) => {
         this.administration_dosage.first.push(this.administration_dosage.first[this.administration_dosage.first.length - 1] + first);
         this.administration_dosage.second.push(this.administration_dosage.second[this.administration_dosage.second.length - 1] + second);
+        this.administration_dosage.third.push(this.administration_dosage.third[this.administration_dosage.third.length - 1] + third);
+        this.administration_dosage.booster.push(this.administration_dosage.booster[this.administration_dosage.booster.length - 1] + booster);
     }
 
     addCategoriesCumulative = (healthcare_personnel, associated_healthcare_personnel, rsa_patients, over_80, other) => {
@@ -89,6 +93,8 @@ export default class AdministrationsAttrs {
         this.administration_gender_cumulative.female = [0];
         this.administration_dosage.first = [0];
         this.administration_dosage.second = [0];
+        this.administration_dosage.third = [0];
+        this.administration_dosage.booster = [0];
         this.administration_categories_cumulative.healthcare_personnel = [0];
         this.administration_categories_cumulative.associated_healthcare_personnel = [0];
         this.administration_categories_cumulative.rsa_patients = [0];

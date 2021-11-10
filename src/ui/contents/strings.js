@@ -41,6 +41,9 @@ export const cardTitles = {
     administrationOther: 'Altri',
     administrationFirstDosage: 'Prime dosi',
     administrationSecondDosage: 'Seconde dosi',
+    administrationThirdDosage: 'Teze dosi',
+    administrationBoosterDosage: 'Dosi booster',
+
 }
 
 export const deliveryChartTitles = {

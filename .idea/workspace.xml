@@ -11,8 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="start to create age repartiton">
+      <change afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationBooster.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardAdministrationThird.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationChartAttributes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/administration/administrationsAttrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/administrationsAttrs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/administration/preprocessing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/administration/administrationComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +36,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -47,22 +53,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/logic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data_representation/resume_cards" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data_representation/resume_cards" />
+      <recent name="$PROJECT_DIR$/src/logic" />
+      <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
+      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/logic/delivery" />
       <recent name="$PROJECT_DIR$/src/logic" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/src/logic/region" />
       <recent name="$PROJECT_DIR$/src/logic/general" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/logic" />
-      <recent name="$PROJECT_DIR$/src/logic/italy_open_source" />
-      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -116,13 +123,7 @@
       <workItem from="1617793862026" duration="1468000" />
       <workItem from="1618997203636" duration="10813000" />
       <workItem from="1619082455122" duration="1495000" />
-    </task>
-    <task id="LOCAL-00014" summary="risolti alcuni problemi nella UI">
-      <created>1597174087820</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1597174087820</updated>
+      <workItem from="1636543125555" duration="2433000" />
     </task>
     <task id="LOCAL-00015" summary="aggiunta pagina menu">
       <created>1597227249907</created>
@@ -460,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622464829306</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="start to create age repartiton">
+      <created>1622489806396</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1622489806397</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,17 +515,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="start to create age repartiton" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617793483473">
-      <screen x="0" y="25" width="2560" height="1340" />
+    <state x="1119" y="650" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636544382666">
+      <screen x="75" y="25" width="2485" height="1415" />
     </state>
-    <state x="1018" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.2560.1340@0.25.2560.1340" timestamp="1617793483473" />
-    <state x="568" y="272" key="Vcs.Push.Dialog.v2" timestamp="1622464831865">
-      <screen x="0" y="25" width="2560" height="1340" />
-    </state>
-    <state x="568" y="272" key="Vcs.Push.Dialog.v2/0.25.2560.1340@0.25.2560.1340" timestamp="1622464831865" />
-    <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618997419001">
-      <screen x="0" y="25" width="2560" height="1340" />
-    </state>
-    <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1340@0.25.2560.1340" timestamp="1618997419001" />
+    <state x="1119" y="650" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/75.25.2485.1415@75.25.2485.1415" timestamp="1636544382666" />
   </component>
 </project>
