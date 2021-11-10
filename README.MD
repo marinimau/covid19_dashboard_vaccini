@@ -2,7 +2,7 @@
 
 
 
-A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 vax distribution and administration in Italy.
+A cross-platform (Web, Android, iOS) dashboard to represent the trend of the Covid-19 vax distribution and administration in Italy.
 
 ## PWA URL
 
